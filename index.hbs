@@ -1,0 +1,47 @@
+{{!< default}}
+
+{{> header this}}
+<div class="site-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				{{#foreach posts}}
+					<article>
+						<div class="post-cover">
+							<a class="cover-image cover-transition" href="{{url}}" style="background-image: url({{image}})"></a>
+							<div class="cover-content">
+								<h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
+								<div class="post-meta">
+									<span class="post-tags">
+										{{#foreach tags}}
+											<a href="{{url}}">{{name}}</a>
+										{{/foreach}}
+									</span>
+								</div>
+							</div>
+						</div>
+						<ul class="post-desc">
+							<li>
+								<a href="">
+									<img class="" src="{{author.image}}">{{author.name}}
+								</a>
+								<span style="margin: 0 5px;">发表于</span>
+								<span>{{date published_at format="MMMM DD,YYYY"}}</span>
+							</li>
+						</ul>
+					</article>
+				{{/foreach}}
+				{{#if pagination}}
+					{{pagination}}
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</div>
+
+{{> footer this}}
+
+
+
+
+

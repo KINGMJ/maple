@@ -1,0 +1,20 @@
+<header style="background-image: url({{@blog.cover}})" class="site-header">
+	<div class="header-top">
+		{{> nav this}}
+	</div>
+	<div class="header-middle">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="header-middle-content">
+						<a href="{{@blog.url}}" class="site-title">{{@blog.title}}</a>
+						<h5 class="site-description">{{@blog.description}}</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		{{tag_cloud limit="all"}}
+	</div>
+</header>
