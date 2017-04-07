@@ -1,5 +1,6 @@
 body{
     font-family:"lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    background: rgb(241, 241, 241);
 }
 
 /*---------------------site_header--------------------*/
@@ -305,7 +306,8 @@ body{
 /*---------------------site_footer--------------------*/
 
 .site-footer {
-    height: 320px;
+    color: #fff;
+    height: 520px;
     background-color: #303030;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -336,4 +338,13 @@ body{
     font-weight: bold;
     text-decoration: none;
     text-shadow: 0 0 4px #000;
+}
+
+
+/*-------------------footer_content--------------------*/
+.footer-content{
+    font-size: 13px;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #D7D7D7;
 }
