@@ -1,15 +1,32 @@
-<footer style="background-image: url({{@blog.url}}/content/images/2017/03/uns12.jpg)" class="site-footer">
-	<div class="footer-content container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="footer-widget-box">
-					<div class="widget-title">最新文章</div>
-					<div class="widget-content"></div>
+<!--style="background-image: url({{@blog.url}}/content/images/2017/03/uns12.jpg)"-->
+<footer class="site-footer">
+	<div class="footer-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-widget-box">
+						<h4 class="widget-title">最新文章</h4>
+						<div class="widget-content">
+							<!--{{#foreach posts}}-->
+			<!---->
+								<!--<div class="recent-single-post clearfix">-->
+									<!--<a href="{{url}}">-->
+										<!--<div class="post-thumb pull-left" style="background-image: url({{image}})"></div>-->
+									<!--</a>-->
+									<!--<div class="post-info">-->
+										<!--<h4 class="post-title">{{title}}</h4>-->
+										<!--<div class="post-date">{{date published_at format="MMMM DD,YYYY"}}</div>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--{{/foreach}}-->
+						</div>
+					</div>
 				</div>
+				<div class="col-md-4">标签云</div>
+				<div class="col-md-4">订阅</div>
 			</div>
-			<div class="col-md-4">标签云</div>
-			<div class="col-md-4">订阅</div>
 		</div>
+
 	</div>
 	<div class="copyright">
 		<p>梅杰的独立博客<span>&copy; 2016-2017 • All rights reserved.</span></p>

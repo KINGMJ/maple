@@ -1,5 +1,5 @@
-body{
-    font-family:"lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+body {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     background: rgb(241, 241, 241);
 }
 
@@ -42,7 +42,6 @@ body{
 
 .site-title {
     font-size: 60px;
-    font-family: '华文行楷';
 }
 
 .header-middle-content a:hover, .site-description:hover {
@@ -137,10 +136,20 @@ body{
     margin-bottom: 30px;
 }
 
+.post{
+    padding: 0 15px;
+}
+
+.post-card{
+    -webkit-box-shadow: 0 2px 2px 0 #dcdcdc;
+    -moz-box-shadow: 0 2px 2px 0 #dcdcdc;
+     box-shadow: 0 2px 2px 0 #dcdcdc;
+}
+
 .post-cover {
     position: relative;
     overflow: hidden;
-    height: 360px;
+    height: 280px;
     width: 100%;
 }
 
@@ -188,6 +197,12 @@ body{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .6) 100%);
 }
 
+.post-info{
+    background: #fcfcfc;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
 .post-cover .cover-content {
     position: absolute;
     width: 100%;
@@ -307,8 +322,7 @@ body{
 
 .site-footer {
     color: #fff;
-    height: 520px;
-    background-color: #303030;
+    background-color: #0e151b;
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
@@ -318,12 +332,12 @@ body{
     background-size: cover;
 }
 
-
-.copyright{
-    position: absolute;
-    bottom: 20px;
+.copyright {
+    /*position: absolute;*/
+    /*bottom: 20px;*/
     width: 100%;
 }
+
 .copyright p {
     font-family: 'Open Sans', sans-serif;
     color: #fff;
@@ -333,18 +347,56 @@ body{
     letter-spacing: 1px;
 }
 
-.copyright p  a{
+.copyright p a {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
     text-shadow: 0 0 4px #000;
 }
 
-
 /*-------------------footer_content--------------------*/
-.footer-content{
+.footer-content {
     font-size: 13px;
     padding-bottom: 35px;
     margin-bottom: 35px;
     border-bottom: 1px solid #D7D7D7;
+}
+
+.footer-widget-box {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.footer-widget-box .widget-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 24px;
+}
+
+.widget-content .recent-single-post {
+    margin-bottom: 16px;
+}
+
+.widget-content .recent-single-post .post-thumb {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.widget-content .recent-single-post .post-info {
+    margin-left: 96px;
+}
+
+.widget-content .recent-single-post .post-info .post-title {
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.widget-content .recent-single-post .post-info .post-date {
+    color: #909090;
 }
