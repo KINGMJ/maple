@@ -256,6 +256,7 @@ a:hover {
     position: relative;
     overflow: hidden;
     padding: 20px;
+    height: 210px;
 }
 
 /*title*/
@@ -284,6 +285,15 @@ a:hover {
     word-break: break-all;
     word-wrap: normal;
 }
+
+.post-info .post-date{
+    position: absolute;
+    bottom: 0;
+    padding: 15px 0;
+    color: #717f8e;
+    font-size: 12px;
+}
+/*发布日期*/
 
 /*.post-cover .cover-content {*/
 /*position: absolute;*/
