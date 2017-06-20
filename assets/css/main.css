@@ -250,6 +250,7 @@ a:hover {
     background: rgba(255, 255, 255, .2);
 }
 
+/*post详情*/
 .post-info {
     background: #fcfcfc;
     position: relative;
@@ -257,6 +258,7 @@ a:hover {
     padding: 20px;
 }
 
+/*title*/
 .post-info .post-title {
     font-size: 18px;
     margin: 0;
@@ -273,7 +275,8 @@ a:hover {
     text-decoration: none;
 }
 
-.post-info .post-categories {
+/*摘要*/
+.post-info .post-summary {
     line-height: 1.6;
     font-size: 13px;
     color: #6e6e6e;
