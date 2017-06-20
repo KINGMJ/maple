@@ -11,11 +11,19 @@
 							<!--post封面-->
 							<div class="post-cover">
 								<a class="cover-image cover-transition" href="{{url}}" style="background-image: url({{image}})"></a>
+								<div class="cover-bottom">
+									<div class="post-tags">
+										{{#foreach tags}}
+											<a href="{{url}}">{{name}}</a>
+										{{/foreach}}
+									</div>
+								</div>
+
 							</div>
 							<div class="post-info">
 								<h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
 								<p class="post-categories">
-									{{excerpt characters="140"}}
+									{{excerpt characters="140"}}...
 								</p>
 							</div>
 						</div>
