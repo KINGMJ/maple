@@ -1,27 +1,28 @@
 <header style="background-image: url({{@blog.cover}})" class="site-header">
-	<div class="header-top">
-		{{> nav this}}
-	</div>
-	<div class="header-middle">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="header-middle-content">
-						<a href="{{@blog.url}}" class="site-title">{{@blog.title}}</a>
-						<h5 class="site-description">{{@blog.description}}</h5>
-						<nav class="site-social-navigation">
-							<ul>
-								<li><a href="#"><i class="fa fa-github"></i></a></li>
-								<li><a href="#"><i class="fa fa-weibo"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--<div class="header-bottom">-->
-		<!--{{tag_cloud limit="all"}}-->
-	<!--</div>-->
+    <div class="header-top">
+        {{> nav this}}
+    </div>
+    <div class="header-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header-middle-content">
+                        <a href="{{@blog.url}}" class="site-title">{{@blog.title}}</a>
+                        <h5 class="site-description">{{@blog.description}}</h5>
+                        <nav class="site-social-navigation">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="scroll-down">
+        <i class="fa fa-angle-down"></i>
+    </a>
 </header>
