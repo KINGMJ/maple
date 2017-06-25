@@ -22,4 +22,5 @@ a {
 
 a:hover {
     color: #179BB2;
+    text-decoration: none;
 }

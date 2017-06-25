@@ -1,19 +1,5 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<nav class="site-navigation">
-				<div class="menu-wrapper">
-					<div class="menu-content">
-						<ul class="menu-list">
-							{{#foreach tags}}
-								<li><a href="{{url}}">{{name}}</a></li>
-							{{/foreach}}
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</div>
-</div>
-
+{{#foreach tags}}
+    <a href="{{url}}">{{name}}</a>
+{{/foreach}}
+<a href="/tag_cloud">...</a>
 
