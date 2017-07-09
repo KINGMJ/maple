@@ -1,0 +1,47 @@
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{#foreach posts}}
+                    <article class="col-md-4 col-sm-6 post">
+                        <div class="post-card">
+                            <!--post封面-->
+                            <div class="post-cover">
+                                <a class="cover-image cover-transition" href="{{url}}"
+                                   style="background-image: url({{image}})"></a>
+                                {{#if tags}}
+                                    <div class="cover-bottom">
+                                        <div class="post-tags">
+                                            {{#foreach tags limit=4}}
+                                                <a href="{{url}}">{{name}}</a>
+                                            {{/foreach}}
+                                        </div>
+                                    </div>
+                                {{/if}}
+                            </div>
+                            <div class="post-info">
+                                <h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
+                                <p class="post-summary">
+                                    {{excerpt characters="100"}}...
+                                </p>
+                                <div class="post-date">
+                                    <i class="fa fa-clock-o"></i>
+                                    <span style="margin: 0 5px;">发表于</span>
+                                    <span>{{date published_at format="MMMM DD,YYYY"}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                {{/foreach}}
+            </div>
+            <div class="col-md-12">
+                {{#if pagination}}
+                    {{pagination}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
