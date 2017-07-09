@@ -5,19 +5,21 @@
 				<div class="col-md-4">
 					<h4 class="footer-content-title">最新文章</h4>
 					<div class="footer-content-post">
-						{{#foreach posts limit=3}}
-							<div class="recent-single-post">
-								<a href="{{url}}" class="footer-post-cover"
-								   style="background-image: url({{image}})"></a>
-								<div class="footer-post-info">
-									<h4 class="footer-post-title"><a href="{{url}}">{{title}}</a></h4>
-									<div class="footer-post-date">
-										<span style="margin: 0 5px;">发表于</span>
-										<span>{{date published_at format="MMMM DD,YYYY"}}</span>
-									</div>
-								</div>
-							</div>
-						{{/foreach}}
+                        {{#get "posts" limit="3" as |recents|}}
+                            {{#foreach recents}}
+                                <div class="recent-single-post">
+                                    <a href="{{url}}" class="footer-post-cover"
+                                       style="background-image: url({{image}})"></a>
+                                    <div class="footer-post-info">
+                                        <h4 class="footer-post-title"><a href="{{url}}">{{title}}</a></h4>
+                                        <div class="footer-post-date">
+                                            <span style="margin: 0 5px;">发表于</span>
+                                            <span>{{date published_at format="MMMM DD,YYYY"}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/foreach}}
+                        {{/get}}
 					</div>
 				</div>
 				<div class="col-md-4">
