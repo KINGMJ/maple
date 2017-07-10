@@ -127,7 +127,6 @@
 /*摘要*/
 .post-info .post-summary {
     line-height: 1.6;
-    font-size: 13px;
     color: #6e6e6e;
     margin: 5px 0;
     word-break: break-all;
@@ -141,6 +140,15 @@
     padding: 15px 0;
     color: #717f8e;
     font-size: 12px;
+}
+
+.post-info .post-tags-on-content {
+    position: absolute;
+    bottom: 40px;
+}
+
+.post-tags-on-content a {
+    margin-right: 10px;
 }
 
 /*.post-cover .cover-content {*/
