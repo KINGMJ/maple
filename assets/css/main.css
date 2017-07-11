@@ -1,7 +1,14 @@
 /*----------------------------------post-------------------------------*/
 
 .site-content {
-    padding-top: 40px;
+    padding-top: 48px;
+}
+
+.home-template .site-content {
+    min-height: 100vh;
+}
+.tag-template .site-content{
+    min-height: 52vh;
 }
 
 .site-content article {
@@ -149,6 +156,11 @@
 
 .post-tags-on-content a {
     margin-right: 10px;
+    color: #717f8e;
+}
+
+.post-tags-on-content a:hover {
+    color: #179BB2;
 }
 
 /*.post-cover .cover-content {*/
@@ -201,6 +213,7 @@
 
 .post-list-pagination {
     padding: 0 10px;
+    margin-top: 30px;
 }
 
 .post-list-pagination .post-navigation {
