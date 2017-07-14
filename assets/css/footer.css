@@ -5,7 +5,7 @@
     position: relative;
     text-align: center;
     margin-top: 48px;
-    padding: 36px;
+    padding: 24px 0 0;
 }
 
 .footer-content-title {
@@ -105,6 +105,23 @@
 
 .footer-follow-social a:hover {
     color: #179BB2;
+}
+
+
+/* ----------------------------------------copyright---------------------------*/
+
+.footer-bottom{
+    background: #2d2d2d;
+    padding: 16px 0;
+}
+
+.footer-bottom .copyright p{
+    margin: 0;
+    line-height: 1.6;
+}
+.footer-bottom .copyright p a{
+    color: #fff;
+    text-shadow: 0 0 12px #ccc;
 }
 
 /*.copyright {*/
