@@ -1,5 +1,40 @@
 {{!< default}}
 {{#post}}
-	This is post page
+	<header style="background-image: url({{#if image}}{{image}}{{else}}{{@blog.cover}}{{/if}})" class="post-header">
+        <div class="post-header-container">
+            <div class="post-nav">
+                <a href="{{@blog.url}}">HOME</a>
+            </div>
+            <div class="post-content">
+                <h1 class="post-title">{{title}}</h1>
+                <p>
+                    <span>{{date published_at format="MMMM DD,YYYY"}}</span>
+                    <span class="post-author">@{{author.name}}</span>
+                </p>
+                <p class="post-tags">{{tags separator=""}}</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <article class="md-preview">
+                    {{content}}
+                </article>
+            </div>
+            <div class="col-md-2">
+
+                    <p style="word-break: break-all">
+                        1.this is a <br>
+                        2.hahha <br>
+                        3.thsiewbr <br>
+                        4.thsiewtewewwwwwwwwwwwwwwwwwbr <br>
+                        5.erwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww <br>
+                    </p>
+
+            </div>
+        </div>
+    </div>
+
 {{/post}}
 

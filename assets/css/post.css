@@ -1,11 +1,11 @@
-.tag-header {
+.post-header{
     background: no-repeat center center;
     background-size: cover;
     position: relative;
     height: 48vh;
 }
 
-.tag-header:before {
+.post-header:before {
     position: absolute;
     content: "";
     top: 0;
@@ -15,7 +15,7 @@
     background: linear-gradient(to bottom, rgba(56, 56, 56, .5), rgba(56, 56, 56, .2) 100%);
 }
 
-.tag-header-container {
+.post-header-container {
     position: relative;
     width: 80%;
     height: 100%;
@@ -28,35 +28,27 @@
     margin: 0 auto;
 }
 
-.tag-content {
+
+.post-header .post-content {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 65px;
 }
 
-.tag-title {
+.post-header .post-title {
     color: #fff;
     font-size: 56px;
-    font-weight: lighter;
+    font-family: "Josefin Sans", sans-serif;
     text-align: center;
+    margin-bottom: 18px;
 }
 
-.tag-description {
-    font-size: 16px;
-}
-
-.tag-post-num {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-}
-
-.tag-nav {
+.post-header .post-nav {
     position: absolute;
     top: 45px;
     left: 0;
 }
 
-.tag-nav a {
+.post-header .post-nav a {
     color: #fff;
     font-size: 12px;
     padding: 8px 32px;
@@ -66,12 +58,21 @@
     background: none;
 }
 
-.tag-nav a:hover {
+.post-header .post-nav a:hover {
     background: rgba(255, 255, 255, .2);
     border-color: rgba(255, 255, 255, .6);
 }
 
-.tag-post-num i {
-    margin-right: 10px;
+.post-header .post-author{
+    margin-left: 10px;
 }
 
+.post-header .post-tags{
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+}
+
+.post-header .post-tags a{
+    margin-right: 10px;
+}
