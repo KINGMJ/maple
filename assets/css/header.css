@@ -26,8 +26,8 @@
 
 .header-top {
     width: 100%;
-    background-color: transparent;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(14,21,27,0.4);
 }
 
 .header-middle {
