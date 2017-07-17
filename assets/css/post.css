@@ -1,4 +1,4 @@
-.post-header{
+.post-header {
     background: no-repeat center center;
     background-size: cover;
     position: relative;
@@ -27,7 +27,6 @@
     flex-direction: column;
     margin: 0 auto;
 }
-
 
 .post-header .post-content {
     text-align: center;
@@ -63,26 +62,26 @@
     border-color: rgba(255, 255, 255, .6);
 }
 
-.post-header .post-author{
+.post-header .post-author {
     margin-left: 10px;
 }
 
-.post-header .post-tags{
+.post-header .post-tags {
     position: absolute;
     left: 0;
     bottom: 12px;
 }
 
-.post-header .post-tags a{
+.post-header .post-tags a {
     margin-right: 10px;
 }
 
-
 /*-----------------------------------toc-------------------------------------------------*/
-#toc{
+#toc {
     color: #4183C4;
     padding-top: 20px;
 }
+
 #toc ul {
     margin: 0;
     padding: 0;
@@ -97,6 +96,7 @@
     color: #4183C4;
     text-decoration: none;
     display: block;
+    transition: none;
 }
 
 #toc .toc-h2 {
@@ -112,6 +112,11 @@
 
 }
 
-#toc .toc-active a{
+#toc .toc-active a {
     color: #fff;
+}
+
+#toc.toc-fixed {
+    position: fixed;
+    top: 0;
 }
