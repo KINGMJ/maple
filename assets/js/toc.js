@@ -110,6 +110,7 @@
             highlightOnScroll();
         }
 
+        var prev_li = parseInt(headings[0].localName.replace('h', ''));   //上一个li
         return this.each(function () {
             //build TOC
             var el = $(this);
@@ -121,6 +122,7 @@
 
                 var anchorName = opts.anchorName(i, heading, opts.prefix);
 
+                var h_title = parseInt(heading.localName.replace('h', ''));
                 //add anchor
                 if (heading.id !== anchorName) {
                     var anchor = $('<span/>').attr('id', anchorName).insertBefore($h);
@@ -141,7 +143,11 @@
                 var li = $('<li/>')
                     .addClass(opts.itemClass(i, heading, $h, opts.prefix))
                     .append(a);
-
+                if (h_title > prev_li) {
+                    li.addClass('hidden');
+                } else {
+                    prev_li = h_title;
+                }
                 ul.append(li);
             });
             el.html(ul);
