@@ -101,7 +101,12 @@
                     }
                 }
                 $('li', self).removeClass(activeClassName);
-                highlighted = $('li:eq(' + index + ')', self).addClass(activeClassName);
+                // var current_li_class=$('li:eq(' + index + ')', self)[0].className;
+                // var next_up_level_li=$('li:eq(' + index + ')', self).nextAll(":not('."+current_li_class+"')");
+                // $.each(next_up_level_li,function (i,n) {
+                //     console.log(n);
+                // });
+                highlighted = $('li:eq(' + index + ')', self).addClass(activeClassName).removeClass('hidden');
                 opts.onHighlight(highlighted);
             }, 50);
         };
@@ -110,7 +115,7 @@
             highlightOnScroll();
         }
 
-        var prev_li = parseInt(headings[0].localName.replace('h', ''));   //上一个li
+        var prev_li_int = parseInt(headings[0].localName.replace('h', ''));   //上一个li
         return this.each(function () {
             //build TOC
             var el = $(this);
@@ -143,10 +148,10 @@
                 var li = $('<li/>')
                     .addClass(opts.itemClass(i, heading, $h, opts.prefix))
                     .append(a);
-                if (h_title > prev_li) {
+                if (h_title > prev_li_int) {
                     li.addClass('hidden');
                 } else {
-                    prev_li = h_title;
+                    prev_li_int = h_title;
                 }
                 ul.append(li);
             });
