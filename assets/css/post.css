@@ -100,11 +100,11 @@
 }
 
 #toc .toc-h2 {
-    padding-left: 10px;
+    text-indent: 1em;
 }
 
 #toc .toc-h3 {
-    padding-left: 20px;
+    text-indent: 2em;
 }
 
 #toc .toc-active {
@@ -116,14 +116,21 @@
     color: #fff;
 }
 
+#toc.toc-absolute {
+    position: absolute;
+    top: 52.5vh;
+    right: 0;
+}
+
 #toc.toc-fixed {
     position: fixed;
     top: 0;
+    right: 0;
 }
 
 .read-next {
     display: flex;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .read-next-story {
@@ -163,8 +170,7 @@
 }
 
 .read-next-story .post {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 80px 20px;
     position: relative;
 }
 
@@ -172,7 +178,7 @@
     content: "前一篇";
     padding: 4px 10px 5px;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 12px;
     font-family: inherit;
     color: rgba(255, 255, 255, 0.8);
     border: rgba(255, 255, 255, 0.5) 1px solid;
@@ -185,7 +191,7 @@
 }
 
 .read-next-story h2 {
-    margin-top: 1rem;
+    margin: 20px 0;
     color: #fff;
 }
 
@@ -224,3 +230,117 @@
     box-sizing: border-box;
 }
 
+.post-footer {
+    position: relative;
+    margin: 6rem 0 0 0;
+    padding: 6rem 0 0 0;
+    border-top: 1px dashed #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.post-footer section.author {
+    width: 70%;
+}
+
+.author-image {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 6px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: #E7EEF2 0 0 0 1px;
+}
+
+.author-image a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
+}
+
+.post-footer h4 {
+    color: #888;
+}
+
+.post-footer h4 a {
+    color: #888;
+    text-decoration: none;
+}
+
+.post-footer h4 a:hover {
+    color: #333;
+}
+
+.post-footer p {
+    margin: 15px 0;
+    line-height: 1.75;
+}
+
+.author-meta {
+    margin: 15px 0;
+    font-size: 14px;
+    line-height: 1;
+    font-style: italic;
+    color: #888;
+}
+
+.author-meta span {
+    display: inline-block;
+    margin-right: 20px;
+    word-wrap: break-word;
+}
+
+.author-meta span i {
+    margin-right: 5px;
+}
+
+.share-icons {
+    margin: 15px 0;
+    display: flex;
+}
+
+.icon-share {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.icon-share.icon-weibo {
+    background: #e6162d;
+}
+
+.icon-share.icon-github {
+    background: #333;
+}
+
+.icon-share.icon-facebook {
+    background: #2aa9e0;
+}
+
+.icon-share i {
+    font-size: 30px;
+    color: #fff;
+}

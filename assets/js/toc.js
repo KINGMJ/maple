@@ -79,6 +79,7 @@
 
         //highlight on scroll
         var timeout;
+        var prev_top;  //上一次滚动的距离，用来判断滚动的方向
         var highlightOnScroll = function (e) {
             if (timeout) {
                 clearTimeout(timeout);
@@ -86,6 +87,16 @@
             timeout = setTimeout(function () {
                 var top = $(window).scrollTop(),
                     highlighted, closest = Number.MAX_VALUE, index = 0;
+                var scroll_direction;
+                //判断滚动的方向
+                if (top > prev_top) {
+                    scroll_direction = 'down';
+                } else {
+                    scroll_direction = 'up';
+                }
+                prev_top = top;
+
+                //判断当前滚动到那个元素
                 if (top < headingOffsets[0]) {
                     index = 0;
                 } else if (top >= headingOffsets[headingOffsets.length - 1]) {
@@ -101,12 +112,73 @@
                     }
                 }
                 $('li', self).removeClass(activeClassName);
-                // var current_li_class=$('li:eq(' + index + ')', self)[0].className;
-                // var next_up_level_li=$('li:eq(' + index + ')', self).nextAll(":not('."+current_li_class+"')");
-                // $.each(next_up_level_li,function (i,n) {
-                //     console.log(n);
-                // });
                 highlighted = $('li:eq(' + index + ')', self).addClass(activeClassName).removeClass('hidden');
+
+                var current_li_class = $('.toc-active')[0].className.split(' ')[0];
+                var current_h_title = current_li_class.charAt(current_li_class.length - 1);
+                var next_li = $('.toc-active').nextAll();
+                var prev_li = $('.toc-active').prevAll();
+
+                if (scroll_direction == 'down') {
+                    //当前li之前的下一级
+                    var prev_low_level_li = $('.toc-active').prevAll('.toc-h' + (parseInt(current_h_title) + 1));
+                    $(prev_low_level_li).addClass('hidden');
+                    $.each(next_li, function (i, n) {
+                        var li_class = n.className.split(' ')[0];
+                        var h_title = li_class.charAt(li_class.length - 1);
+                        if (h_title < current_h_title) {
+                            return false;
+                        }
+                        if (h_title == current_h_title) {
+                            $(n).removeClass('hidden');
+                            return true;
+                        }
+                    });
+                    $.each(prev_li, function (i, n) {
+                        var li_class = n.className.split(' ')[0];
+                        var h_title = li_class.charAt(li_class.length - 1);
+                        if (h_title < current_h_title) {
+                            var prev_hidden_li = $(n).prevAll('.toc-h' + (parseInt(current_h_title)));
+                            prev_hidden_li.addClass('hidden');
+                            $(n).removeClass('hidden');
+                            return false;
+                        }
+                        if (h_title == current_h_title) {
+                            $(n).removeClass('hidden');
+                            return true;
+                        }
+                    });
+                    $('li:eq(0)', self).removeClass('hidden');
+                } else {
+                    //当前li之后的下一级
+                    var next_low_level_li = $('.toc-active').nextAll('.toc-h' + (parseInt(current_h_title) + 1));
+                    $(next_low_level_li).addClass('hidden');
+                    $.each(prev_li, function (i, n) {
+                        var li_class = n.className.split(' ')[0];
+                        var h_title = li_class.charAt(li_class.length - 1);
+                        if (h_title < current_h_title) {
+                            $(n).removeClass('hidden');
+                            return false;
+                        }
+                        if (h_title == current_h_title) {
+                            $(n).removeClass('hidden');
+                            return true;
+                        }
+                    });
+                    $.each(next_li, function (i, n) {
+                        var li_class = n.className.split(' ')[0];
+                        var h_title = li_class.charAt(li_class.length - 1);
+                        if (h_title < current_h_title) {
+                            $(n).nextAll('.toc-h' + (parseInt(current_h_title))).addClass('hidden');
+                            return false;
+                        }
+                        if (h_title == current_h_title) {
+                            $(n).removeClass('hidden');
+                            return true;
+                        }
+                    });
+
+                }
                 opts.onHighlight(highlighted);
             }, 50);
         };
@@ -152,6 +224,7 @@
                     li.addClass('hidden');
                 } else {
                     prev_li_int = h_title;
+
                 }
                 ul.append(li);
             });

@@ -20,7 +20,7 @@ $(function () {
         'selectors': 'h1,h2,h3', //elements to use as headings
         'container': '.md-preview', //element to find all selectors in
         'prefix': 'toc',
-        'highlightOffset': 0, //offset to trigger the next headline
+        'highlightOffset': 1, //offset to trigger the next headline
         'anchorName': function (i, heading, prefix) { //custom function for anchor name
             return prefix + i;
         }
@@ -28,10 +28,18 @@ $(function () {
 
     //toc设置
     $(window).scroll(function () {
+        var max_height = $('.md-preview').offset().top + $('.md-preview').outerHeight();
+        var toc_top = $('#toc').offset().top + $('#toc').outerHeight();
+
         if ($(window).scrollTop() > $('header').outerHeight()) {
-            $('#toc').addClass('toc-fixed');
+            // if (toc_top > max_height) {
+            //     $('#toc').removeClass('toc-fixed').addClass('toc-absolute').css("top", max_height - $('#toc').outerHeight());
+            // } else {
+            //     $('#toc').removeClass('toc-absolute').addClass('toc-fixed').removeAttr("style");
+            // }
+            $('#toc').removeClass('toc-absolute').addClass('toc-fixed');
         } else {
-            $('#toc').removeClass('toc-fixed');
+            $('#toc').removeClass('toc-fixed').addClass('toc-absolute');
         }
     })
 });

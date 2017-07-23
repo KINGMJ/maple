@@ -2,12 +2,14 @@
 
 .site-content {
     padding-top: 48px;
+    margin-bottom: 48px;
 }
 
 .home-template .site-content {
     min-height: 100vh;
 }
-.tag-template .site-content{
+
+.tag-template .site-content {
     min-height: 52vh;
 }
 

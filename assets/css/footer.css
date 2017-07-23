@@ -4,7 +4,6 @@
     background-color: #0e151b;
     position: relative;
     text-align: center;
-    margin-top: 48px;
     padding: 24px 0 0;
 }
 
@@ -108,25 +107,25 @@
     color: #179BB2;
 }
 
-
 /* ----------------------------------------copyright---------------------------*/
 
-.footer-bottom{
+.footer-bottom {
     background: #2d2d2d;
     padding: 16px 0;
 }
 
-.footer-bottom .copyright p{
+.footer-bottom .copyright p {
     margin: 0;
     line-height: 1.8;
-    font-size:13px;
+    font-size: 13px;
 }
-.footer-bottom .copyright p a{
+
+.footer-bottom .copyright p a {
     color: #dedede;
     text-shadow: 0 0 4px #aaa;
 }
 
-.all-rights-reserved{
+.all-rights-reserved {
     margin-left: 5px;
 }
 
