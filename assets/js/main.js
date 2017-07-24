@@ -28,18 +28,15 @@ $(function () {
 
     //toc设置
     $(window).scroll(function () {
-        var max_height = $('.md-preview').offset().top + $('.md-preview').outerHeight();
-        var toc_top = $('#toc').offset().top + $('#toc').outerHeight();
-
-        if ($(window).scrollTop() > $('header').outerHeight()) {
-            // if (toc_top > max_height) {
-            //     $('#toc').removeClass('toc-fixed').addClass('toc-absolute').css("top", max_height - $('#toc').outerHeight());
-            // } else {
-            //     $('#toc').removeClass('toc-absolute').addClass('toc-fixed').removeAttr("style");
-            // }
-            $('#toc').removeClass('toc-absolute').addClass('toc-fixed');
+        var max_height = $('.md-preview').offset().top + $('.md-preview').outerHeight() - $('#toc').outerHeight(),
+            scroll_top = $(window).scrollTop(),
+            header_height = $('header').outerHeight();
+        if (scroll_top <= header_height) {
+            $('#toc').removeClass('toc-fixed').addClass('toc-absolute').removeAttr('style');
+        } else if (scroll_top > header_height && scroll_top <= max_height) {
+            $('#toc').removeClass('toc-absolute').addClass('toc-fixed').removeAttr('style');
         } else {
-            $('#toc').removeClass('toc-fixed').addClass('toc-absolute');
+            $('#toc').removeClass('toc-fixed').addClass('toc-absolute').css("top", max_height);
         }
     })
 });
