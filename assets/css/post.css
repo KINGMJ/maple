@@ -80,6 +80,7 @@
 #toc {
     color: #4183C4;
     padding-top: 20px;
+    display: none;
 }
 
 #toc ul {
@@ -193,6 +194,32 @@
 .read-next-story h2 {
     margin: 20px 0;
     color: #fff;
+}
+
+@media (min-width: 768px) {
+    #toc {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    #toc {
+        display: none;
+    }
+
+    .read-next-story .post {
+        padding: 60px 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #toc {
+        display: block;
+    }
+
+    .read-next-story .post {
+        padding: 120px 20px;
+    }
 }
 
 .read-next-story p {
