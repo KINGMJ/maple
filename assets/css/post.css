@@ -120,13 +120,13 @@
 #toc.toc-absolute {
     position: absolute;
     top: 52.5vh;
-    right: 0;
+    right: 25px;
 }
 
 #toc.toc-fixed {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 25px;
 }
 
 .read-next {
@@ -213,12 +213,24 @@
 }
 
 @media (min-width: 1200px) {
+    .read-next-story .post {
+        padding: 80px 20px;
+    }
+}
+
+@media (min-width: 1366px) {
     #toc {
         display: block;
     }
+}
 
+@media (min-width: 1600px) {
     .read-next-story .post {
         padding: 160px 20px;
+    }
+
+    #toc {
+        display: block;
     }
 }
 
