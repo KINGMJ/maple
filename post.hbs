@@ -1,89 +1,90 @@
 {{!< default}}
 {{#post}}
-    <header style="background-image: url({{#if image}}{{image}}{{else}}{{@blog.cover}}{{/if}})" class="post-header">
-        <div class="post-header-container">
-            <div class="post-nav">
-                <a href="{{@blog.url}}">HOME</a>
-            </div>
-            <div class="post-content">
-                <h1 class="post-title">{{title}}</h1>
-                <p>
-                    <span>{{date published_at format="MMMM DD,YYYY"}}</span>
-                    <span class="post-author">@{{author.name}}</span>
-                </p>
-                <p class="post-tags">{{tags separator=""}}</p>
-            </div>
-        </div>
-    </header>
-    <div class="container">
-        <div id="toc" class="toc-absolute"></div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <article class="md-preview">
-                    {{content}}
-                </article>
-            </div>
-            <div class="col-md-2">
+	<header style="background-image: url({{#if image}}{{image}}{{else}}{{@blog.cover}}{{/if}})" class="post-header">
+		<div class="post-header-container">
+			<div class="post-nav">
+				<a href="{{@blog.url}}">HOME</a>
+			</div>
+			<div class="post-content">
+				<h1 class="post-title">{{title}}</h1>
+				<p>
+					<span>{{date published_at format="MMMM DD,YYYY"}}</span>
+					<span class="post-author">@{{author.name}}</span>
+				</p>
+				<p class="post-tags">{{tags separator=""}}</p>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div id="toc" class="toc-absolute"></div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<article class="md-preview">
+					{{content}}
+				</article>
+			</div>
+			<div class="col-md-2">
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="post-footer">
-                    {{#author}}
-                        <figure class="author-image">
-                            <a href="{{url}}" style="background-image: url({{image}})"></a>
-                        </figure>
-                        <section class="author">
-                            <h4>
-                                <a href="{{url}}">{{name}}</a>
-                            </h4>
-                            <p>{{bio}}</p>
-                            <div class="author-meta">
-                                <span><i class="fa fa-map-marker"></i>{{location}}</span>
-                                <span><i class="fa fa-link"></i>{{website}}</span>
-                            </div>
-                        </section>
-                        <section class="share">
-                            <h4>分享这篇文章</h4>
-                            <div class="share-icons">
-                                <a class="icon-share icon-weibo" href="">
-                                    <i class="fa fa-weibo"></i>
-                                </a>
-                                <a class="icon-share icon-github" href="">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                                <a class="icon-share icon-facebook" href="">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </div>
-                        </section>
-                    {{/author}}
-                </div>
-            </div>
-        </div>
-    </div>
-    <aside class="read-next">
-        {{#next_post}}
-            <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"
-                    href="{{url}}">
-                <section class="post">
-                    <h2>{{title}}</h2>
-                    <p>{{excerpt words="19"}}&hellip;</p>
-                </section>
-            </a>
-        {{/next_post}}
-        {{#prev_post}}
-            <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"
-                    href="{{url}}">
-                <section class="post">
-                    <h2>{{title}}</h2>
-                    <p>{{excerpt words="19"}}&hellip;</p>
-                </section>
-            </a>
-        {{/prev_post}}
-    </aside>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="post-footer">
+					{{#author}}
+						<figure class="author-image">
+							<a href="{{url}}" style="background-image: url({{image}})"></a>
+						</figure>
+						<section class="author">
+							<h4>
+								<a href="{{url}}">{{name}}</a>
+							</h4>
+							<p>{{bio}}</p>
+							<div class="author-meta">
+								<span><i class="fa fa-map-marker"></i>{{location}}</span>
+								<span><i class="fa fa-link"></i>{{website}}</span>
+							</div>
+						</section>
+						<section class="share">
+							<h4>分享这篇文章</h4>
+							<div class="share-icons">
+								<a class="icon-share icon-weibo" href="">
+									<i class="fa fa-weibo"></i>
+								</a>
+								<a class="icon-share icon-github" href="">
+									<i class="fa fa-github"></i>
+								</a>
+								<a class="icon-share icon-facebook" href="">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</div>
+						</section>
+					{{/author}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<aside class="read-next">
+		{{#next_post}}
+			<a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"
+					href="{{url}}">
+				<section class="post">
+					<h2>{{title}}</h2>
+					<p>{{excerpt words="19"}}&hellip;</p>
+				</section>
+			</a>
+		{{/next_post}}
+		{{#prev_post}}
+			<a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"
+					href="{{url}}">
+				<section class="post">
+					<h2>{{title}}</h2>
+					<p>{{excerpt words="19"}}&hellip;</p>
+				</section>
+			</a>
+		{{/prev_post}}
+	</aside>
 
-
+	{{> copyright this}}
 {{/post}}
+
 
