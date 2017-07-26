@@ -1,0 +1,19 @@
+{{!< default}}
+<header style="background-image: url({{@blog.cover}})" class="tag-header">
+    <div class="tag-header-container">
+        <div class="tag-nav">
+            <a href="{{@blog.url}}">HOME</a>
+        </div>
+        <div class="tag-content">
+            <h1 class="tag-title">标签云</h1>
+        </div>
+        <div class="tag-post-num">
+            <i class="fa fa-signal"></i><span>共 {{pagination.total}} 个标签</span>
+        </div>
+    </div>
+
+</header>
+
+{{tag_cloud}}
+{{> footer this}}
+{{> copyright this}}

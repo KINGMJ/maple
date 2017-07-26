@@ -85,6 +85,7 @@
                 clearTimeout(timeout);
             }
             timeout = setTimeout(function () {
+                if ($('li', self).length == 0) return;
                 var top = $(window).scrollTop(),
                     highlighted, closest = Number.MAX_VALUE, index = 0;
                 var scroll_direction;
@@ -186,7 +187,7 @@
             $(window).bind('scroll', highlightOnScroll);
             highlightOnScroll();
         }
-
+        if (headings.length == 0) return;
         var prev_li_int = parseInt(headings[0].localName.replace('h', ''));   //上一个li
         return this.each(function () {
             //build TOC
