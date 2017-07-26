@@ -81,6 +81,7 @@
     color: #4183C4;
     padding-top: 20px;
     display: none;
+    max-width: 21%;
 }
 
 #toc ul {
@@ -90,7 +91,7 @@
 }
 
 #toc li {
-    padding: 5px 10px;
+    padding: 5px 0;
 }
 
 #toc a {
@@ -101,32 +102,33 @@
 }
 
 #toc .toc-h2 {
-    text-indent: 1em;
+    margin-left: 12px;
 }
 
 #toc .toc-h3 {
-    text-indent: 2em;
+    margin-left: 24px;
 }
 
-#toc .toc-active {
-    background: #333;
-
+#toc a {
+    border-left: 3px solid transparent;
+    padding-left: 10px;
 }
 
 #toc .toc-active a {
-    color: #fff;
+    border-left: 3px solid #d44950;
+    color: #d44950;
 }
 
 #toc.toc-absolute {
     position: absolute;
     top: 52.5vh;
-    right: 25px;
+    right: 5px;
 }
 
 #toc.toc-fixed {
     position: fixed;
     top: 0;
-    right: 25px;
+    right: 5px;
 }
 
 .read-next {
