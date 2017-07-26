@@ -38,6 +38,19 @@ $(function () {
         } else {
             $('#toc').removeClass('toc-fixed').addClass('toc-absolute').css("top", max_height);
         }
-    })
+    });
+
+    //回到顶部
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 300) {
+            $('#back_to_top').fadeIn(300);
+        } else {
+            $('#back_to_top').fadeOut(300);
+        }
+    });
+    $('#back_to_top').click(function () {
+        $('html,body').animate({scrollTop: '0px'}, 600);
+        return false;
+    });
 });
 
