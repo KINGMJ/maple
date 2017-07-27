@@ -60,17 +60,26 @@
     padding: 0 16px;
     border: 1px solid #1f2f3d;
     display: inline-block;
-    font-size: 14px;
-    line-height: 24px;
     margin-right: 8px;
     margin-bottom: 8px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+    background-image: none !important;
 }
 
 .footer-content-tags a:hover {
     background: #179BB2;
+}
+
+.footer-content-tags .overlay h2 {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.footer-content-tags .overlay button {
+    display: none;
 }
 
 .footer-friend-links {
