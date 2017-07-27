@@ -24,7 +24,7 @@ $(function () {
         'anchorName': function (i, heading, prefix) { //custom function for anchor name
             return prefix + i;
         }
-    });
+    }); 
 
     //toc设置
     $(window).scroll(function () {

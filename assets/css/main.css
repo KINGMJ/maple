@@ -270,8 +270,8 @@
 
 /*标签云*/
 .page-tag_cloud .site-content a {
-    width: 200px;
-    height: 110px;
+    width: 220px;
+    height: 135px;
     display: flex;
     background-size: cover;
     background-repeat: no-repeat;
@@ -304,7 +304,7 @@
     font-size: 16px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.6);
-    transform: translateY(55px);
+    transform: translateY(80px);
     transition: all 0.4s ease-in-out;
 }
 
@@ -317,11 +317,14 @@
     transform: scale(0);
     transition: all 0.4s ease-in-out;
     font-weight: normal;
-    border: 1px solid white;
-    margin: -55px 0 0 0;
-    padding: 73px 90px;
+    border: 1px solid #fff;
+    padding: 82px 0 12px;
     display: inline-block;
     text-decoration: none;
+    left: 8%;
+    top: 10px;
+    width: 84%;
+    position: absolute;
     text-transform: uppercase;
     background: transparent;
     color: #fff;
