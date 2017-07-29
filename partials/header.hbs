@@ -1,6 +1,6 @@
 <header style="background-image: url({{@blog.cover}})" class="site-header">
     <div class="header-top">
-        {{> nav this}}
+        {{> nav}}
     </div>
     <div class="header-middle">
         <div class="container">
@@ -8,7 +8,7 @@
                 <div class="col-md-12">
                     <div class="header-middle-content">
                         <a href="{{@blog.url}}" class="site-title">{{@blog.title}}</a>
-                        <h5 class="site-description">{{@blog.description}}</h5>
+                        <h4 class="site-description">{{@blog.description}}</h4>
                         <nav class="site-social-navigation">
                             <ul>
                                 <li><a href="#"><i class="fa fa-github"></i></a></li>
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <a class="scroll-down">
+    <a class="indicator">
         <i class="fa fa-angle-down"></i>
     </a>
 </header>

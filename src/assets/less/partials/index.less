@@ -1,0 +1,124 @@
+.home-template .site-content {
+  min-height: 100vh;
+}
+
+.tag-template .site-content {
+  min-height: 52vh;
+}
+
+.site-content .post {
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.post-card {
+  box-shadow: 0 2px 2px 0 #dcdcdc;
+}
+
+.post-cover {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  width: 100%;
+  .cover-image {
+    display: block;
+    background: no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &:after {
+      .cover-mixin;
+      background: linear-gradient(to bottom, rgba(56, 56, 56, 0) 0, rgba(56, 56, 56, .25) 100%);
+      transition: opacity 1s ease-in-out;
+    }
+  }
+  &:hover .cover-image {
+    transform: scale(1.04);
+    &:after {
+      background: linear-gradient(to bottom, rgba(56, 56, 56, 0) 0, rgba(56, 56, 56, .45) 100%);
+    }
+  }
+  .cover-transition {
+    transition: transform 1s linear, opacity 1s ease-in-out;
+  }
+}
+
+.cover-bottom {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background: linear-gradient(transparent, #2E2E2E);
+  padding: 20px 0;
+}
+
+.post-tags {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  a {
+    margin-right: 5px;
+    padding: 0 6px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, .35);
+    color: @font-white-color;
+    font-size: 13px;
+    &:hover {
+      text-decoration: none;
+      background: rgba(255, 255, 255, .25);
+    }
+  }
+}
+
+/*post详情*/
+.post-info {
+  background-color: #fcfcfc;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  height: 210px;
+  .post-title {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.42857143;
+    font-weight: 800;
+    a {
+      color: #333;
+      &:hover {
+        color: #179BB2;
+        text-decoration: none;
+      }
+    }
+  }
+  .post-summary {
+    line-height: 1.6;
+    color: #6e6e6e;
+    margin: 5px 0;
+    word-break: break-all;
+    word-wrap: normal;
+  }
+  .post-date {
+    position: absolute;
+    bottom: 0;
+    padding: 15px 0;
+    color: #717f8e;
+    font-size: 12px;
+  }
+}
+
+.post-tags-on-content {
+  position: absolute;
+  bottom: 40px;
+  a {
+    margin-right: 10px;
+    color: #717f8e;
+    &:hover {
+      color: @link-color;
+    }
+  }
+}
+
+

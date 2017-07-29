@@ -1,0 +1,54 @@
+/*-------------------------文章toc目录---------------------------*/
+#toc {
+  color: #4183C4;
+  padding-top: 20px;
+  display: none;
+  max-width: 21%;
+}
+
+#toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#toc li {
+  padding: 5px 0;
+}
+
+#toc a {
+  color: #4183C4;
+  text-decoration: none;
+  display: block;
+  transition: none;
+}
+
+#toc .toc-h2 {
+  margin-left: 12px;
+}
+
+#toc .toc-h3 {
+  margin-left: 24px;
+}
+
+#toc a {
+  border-left: 3px solid transparent;
+  padding-left: 10px;
+}
+
+#toc .toc-active a {
+  border-left: 3px solid #d44950;
+  color: #d44950;
+}
+
+#toc.toc-absolute {
+  position: absolute;
+  top: 52.5vh;
+  right: 5px;
+}
+
+#toc.toc-fixed {
+  position: fixed;
+  top: 0;
+  right: 5px;
+}

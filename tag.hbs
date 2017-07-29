@@ -1,24 +1,25 @@
 {{!< default}}
 <header style="background-image: url({{#if tag.image}}{{tag.image}}{{else}}{{@blog.cover}}{{/if}})" class="tag-header">
-	<div class="tag-header-container">
-		<div class="tag-nav">
-			<a href="{{@blog.url}}">HOME</a>
-		</div>
-		<div class="tag-content">
-			<h1 class="tag-title">{{tag.name}}</h1>
-			{{#if tag.description}}
-				<h2 class="tag-description">
-					{{tag.description}}
-				</h2>
-			{{/if}}
-		</div>
-		<div class="tag-post-num">
-			<i class="fa fa-signal"></i><span>共 {{pagination.total}} 篇文章</span>
-		</div>
-	</div>
+    <div class="tag-header-container">
+        <div class="tag-nav">
+            <a href="{{@blog.url}}">HOME</a>
+        </div>
+        <div class="tag-content">
+            <h1 class="tag-title">{{tag.name}}</h1>
+            {{#if tag.description}}
+                <h2 class="tag-description">
+                    {{tag.description}}
+                </h2>
+            {{/if}}
+        </div>
+        <div class="tag-post-num">
+            <i class="fa fa-signal"></i><span>共 {{pagination.total}} 篇文章</span>
+        </div>
+    </div>
 
 </header>
-
-{{> loop this}}
-{{> footer this}}
-{{> copyright this}}
+<div class="site-content">
+    {{> loop}}
+</div>
+{{> footer}}
+{{> copyright}}

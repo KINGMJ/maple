@@ -1,0 +1,44 @@
+/*----------------------------------分页器-------------------------------------*/
+.post-list-pagination {
+  padding: 0 10px;
+  margin-top: 30px;
+  .post-navigation {
+    margin: 0 15px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      color: @font-grey-color;
+      li {
+        display: inline-block;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: bold;
+        word-spacing: 2px;
+        &.nav-previous {
+          float: left;
+          margin-top: 2px;
+        }
+        &.nav-next {
+          float: right;
+          margin-top: 2px;
+        }
+        a {
+          color: @font-grey-color;
+          padding: 0 2px;
+          &:hover {
+            color: @link-color;
+            text-decoration: none;
+          }
+          span {
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+  }
+}
+

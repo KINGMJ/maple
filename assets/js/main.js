@@ -1,6 +1,6 @@
 $(function () {
     //点击向下的箭头滚动到文章区域
-    $('.scroll-down').click(function () {
+    $('.indicator').click(function () {
         var scrollTop = $('.site-content').offset().top;
         $('body').animate({scrollTop: scrollTop}, 600);
     });
@@ -24,7 +24,7 @@ $(function () {
         'anchorName': function (i, heading, prefix) { //custom function for anchor name
             return prefix + i;
         }
-    }); 
+    });
 
     //toc设置
     $(window).scroll(function () {

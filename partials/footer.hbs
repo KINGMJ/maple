@@ -1,54 +1,54 @@
 <footer class="site-footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<h4 class="footer-content-title">最新文章</h4>
-				<div class="footer-content-post">
-					{{#get "posts" limit="3" as |recents|}}
-						{{#foreach recents}}
-							<div class="recent-single-post">
-								<a href="{{url}}" class="footer-post-cover"
-								   style="background-image: url({{image}})"></a>
-								<div class="footer-post-info">
-									<h4 class="footer-post-title"><a href="{{url}}">{{title}}</a></h4>
-									<div class="footer-post-date">
-										<span style="margin: 0 5px;">发表于</span>
-										<span>{{date published_at format="MMMM DD,YYYY"}}</span>
-									</div>
-								</div>
-							</div>
-						{{/foreach}}
-					{{/get}}
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h4 class="footer-content-title">标签云</h4>
-				<div class="footer-content-tags">
-					{{tag_cloud limit=10}}
-					<a href="/tag_cloud">...</a>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h4 class="footer-content-title">友情链接</h4>
-				<div class="footer-friend-links">
-					<a href="https://www.baidu.com">百度</a>
-					<a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a>
-					<a href="https://www.leangoo.com">Leangoo协作工具</a>
-					<a href="https://ghost.org/">Ghost博客</a>
-					<a href="http://www.jianshu.com/">简书</a>
-					<a href="http://blog.aiboms.cn/">大亮的技术博客</a>
-				</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="footer-content-title">最新文章</h4>
+                <div class="footer-content-post">
+                    {{#get "posts" limit="3" as |recents|}}
+                        {{#foreach recents}}
+                            <div class="recent-single-post">
+                                <a href="{{url}}" class="footer-post-cover"
+                                   style="background-image: url({{image}})"></a>
+                                <div class="footer-post-info">
+                                    <h4 class="footer-post-title"><a href="{{url}}">{{title}}</a></h4>
+                                    <div class="footer-post-date">
+                                        <span style="margin: 0 5px;">发表于</span>
+                                        <span>{{date published_at format="MMMM DD,YYYY"}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="footer-content-title">标签云</h4>
+                <div class="footer-content-tags">
+                    {{tag_cloud limit=10}}
+                    <a href="/tag_cloud">...</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="footer-content-title">友情链接</h4>
+                <div class="footer-friend-links">
+                    <a href="https://www.baidu.com">百度</a>
+                    <a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a>
+                    <a href="https://www.leangoo.com">Leangoo协作工具</a>
+                    <a href="https://ghost.org/">Ghost博客</a>
+                    <a href="http://www.jianshu.com/">简书</a>
+                    <a href="http://blog.aiboms.cn/">大亮的技术博客</a>
+                </div>
 
-				<h4 class="footer-content-title">FOLLOW ME</h4>
-				<div class="footer-follow-social">
-					<a href=""><i class="fa fa-facebook"></i></a>
-					<a href=""><i class="fa fa-twitter"></i></a>
-					<a href=""><i class="fa fa-google-plus"></i></a>
-					<a href=""><i class="fa fa-instagram"></i></a>
-					<a href=""><i class="fa fa-linkedin"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
+                <h4 class="footer-content-title">FOLLOW ME</h4>
+                <div class="footer-follow-social">
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
