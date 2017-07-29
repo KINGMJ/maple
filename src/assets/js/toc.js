@@ -277,7 +277,6 @@
         itemClass: function (i, heading, $heading, prefix) {
             return prefix + '-' + $heading[0].tagName.toLowerCase();
         }
-
     };
 
 })(jQuery);

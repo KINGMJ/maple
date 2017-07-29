@@ -1,21 +1,5 @@
 $(function () {
-    //点击向下的箭头滚动到文章区域
-    $('.indicator').click(function () {
-        var scrollTop = $('.site-content').offset().top;
-        $('body').animate({scrollTop: scrollTop}, 600);
-    });
-
-    $('.grid').masonry({
-        columnWidth: 'article',
-        itemSelector: 'article',
-        percentPosition: true
-    });
-
-    if ($('body').hasClass('paged')) {
-        var scrollTop = $('.site-content').offset().top;
-        $('body').animate({scrollTop: scrollTop}, 0);
-    }
-
+    //初始化toc
     $('#toc').toc({
         'selectors': 'h1,h2,h3', //elements to use as headings
         'container': '.md-preview', //element to find all selectors in
@@ -26,7 +10,7 @@ $(function () {
         }
     });
 
-    //toc设置
+    //toc滚动设置
     $(window).scroll(function () {
         var max_height = $('.md-preview').offset().top + $('.md-preview').outerHeight() - $('#toc').outerHeight(),
             scroll_top = $(window).scrollTop(),
@@ -53,4 +37,3 @@ $(function () {
         return false;
     });
 });
-
