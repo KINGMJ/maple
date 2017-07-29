@@ -3,6 +3,7 @@ var less = require('gulp-less');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 
 //编译、合并、压缩less文件
 gulp.task('less', function () {
@@ -19,7 +20,9 @@ gulp.task('less', function () {
 
 //压缩、合并js文件
 gulp.task('js', function () {
-
+    gulp.src('src/assets/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/js'))
 });
 
 
@@ -28,5 +31,5 @@ gulp.task('auto', function () {
     gulp.watch('src/assets/less/**/*.less', ['less'])
 });
 
-
-gulp.task('default', ['less', 'auto']);
+//生产环境
+gulp.task('build', ['less', 'js']);
