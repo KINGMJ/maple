@@ -1,4 +1,5 @@
 $(function () {
+    if ($('body').hasClass('page-template')) return;
     //初始化toc
     $('#toc').toc({
         'selectors': 'h1,h2,h3', //elements to use as headings
