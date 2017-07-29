@@ -1,26 +1,26 @@
 {{!< default}}
 <header style="background-image: url({{@blog.cover}})" class="tag-header">
-	<div class="tag-header-container">
-		<div class="tag-nav">
-			<a href="{{@blog.url}}">HOME</a>
-		</div>
-		<div class="tag-content">
-			<h1 class="tag-title">标签云</h1>
-		</div>
-		<div class="tag-post-num">
-			<i class="fa fa-signal"></i><span>共 {{pagination.total}} 个标签</span>
-		</div>
-	</div>
+    <div class="tag-header-container">
+        <div class="tag-nav">
+            <a href="{{@blog.url}}">HOME</a>
+        </div>
+        <div class="tag-content">
+            <h1 class="tag-title">标签云</h1>
+        </div>
+        <div class="tag-post-num">
+            <i class="fa fa-signal"></i><span>共 <span class="num"></span> 个标签</span>
+        </div>
+    </div>
 
 </header>
 <div class="site-content">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 tags-container">
-				{{tag_cloud limit="all"}}
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 tags-container">
+                {{tag_cloud limit="all"}}
+            </div>
+        </div>
+    </div>
 </div>
 
 {{> footer this}}

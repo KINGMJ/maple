@@ -16,5 +16,12 @@ $(function () {
     if ($('body').hasClass('paged')) {
         var scrollTop = $('.site-content').offset().top;
         $('body').animate({scrollTop: scrollTop}, 0);
+        $('.site-header').removeClass('invisible');
+    }
+
+    //显示标签的数量
+    if ($('body').hasClass('page-tag_cloud')) {
+        var tag_count = $('.tags-container a').length;
+        $('.tag-post-num .num').text(tag_count);
     }
 });

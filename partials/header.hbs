@@ -1,4 +1,4 @@
-<header style="background-image: url({{@blog.cover}})" class="site-header">
+<header style="background-image: url({{@blog.cover}})" class="site-header {{#is 'paged'}}invisible{{/is}}">
     <div class="header-top">
         {{> nav}}
     </div>
