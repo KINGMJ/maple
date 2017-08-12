@@ -1,4 +1,7 @@
 $(function () {
+    //代码高亮
+    hljs.initHighlightingOnLoad();
+    
     //如果文章没有标题不会初始化toc
     var has_toc = $('.md-preview h1,.md-preview h2,.md-preview h3').length > 0;
     if (has_toc) {

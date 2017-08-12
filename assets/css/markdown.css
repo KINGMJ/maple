@@ -48,10 +48,12 @@
     border-bottom: 1px solid #dedede;
     padding-bottom: 5px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .md-preview h2 {
     font-size: 27px;
+    font-weight: 600;
 }
 
 .md-preview h3 {
@@ -85,13 +87,10 @@
 }
 
 .md-preview img {
-    max-width: 100%;
-}
-
-.md-preview p img {
     display: flex;
     display: -webkit-flex;
     margin: 15px auto;
+    max-width: 100%;
 }
 
 .md-preview .code {
@@ -142,13 +141,13 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre {
-    background-color: #f7f7f9;
-    border: 1px solid #e1e1e8;
+    background-color: rgb(30, 30, 30);
     font-size: 13px;
     line-height: 1.7;
     overflow: auto;
     padding: 6px 12px;
-    border-radius: 4px;
+    border-radius: 3px;
+    border: none;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     white-space: pre;
     word-spacing: normal;
@@ -157,7 +156,7 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre code {
-    color: #657b83;
+    color: rgb(220, 220, 220);
     white-space: pre;
     border: none;
     background: transparent;

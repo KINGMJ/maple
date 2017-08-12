@@ -12,8 +12,8 @@
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset 'css/markdown.css'}}">
     <link rel="stylesheet" href="{{asset 'css/dataurl.css'}}">
+    <link rel="stylesheet" href="{{asset 'css/vs2015.css'}}">
     <link rel="stylesheet" href="{{asset 'css/style.css'}}">
-	<!--<script src="https://use.fontawesome.com/d6e6a76e15.js"></script>-->
 	{{ghost_head}}
 </head>
 <body class="{{body_class}}">
@@ -22,12 +22,12 @@
 	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdn.bootcss.com/masonry/4.1.0/masonry.pkgd.min.js"></script>
-	<script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <script src="{{asset 'js/main.js'}}"></script>
     {{#is 'post'}}
+        <script src="{{asset 'js/highlight.pack.js'}}"></script>
         <script src="{{asset 'js/toc.js'}}"></script>
         <script src="{{asset 'js/post.js'}}"></script>
     {{/is}}
 </body>
-
 </html>
