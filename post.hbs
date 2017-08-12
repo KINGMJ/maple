@@ -8,7 +8,7 @@
             <div class="post-content">
                 <h1 class="post-title">{{title}}</h1>
                 <p>
-                    <span>{{date published_at format="MMMM DD,YYYY"}}</span>
+                    <span>{{date format="YYYY年MM月DD日"}}</span>
                     <span class="post-author">@{{author.name}}</span>
                 </p>
                 <p class="post-tags">{{tags separator=""}}</p>
@@ -16,20 +16,19 @@
         </div>
     </header>
     <div class="site-content">
-        <div class="container">
-            <div id="toc" class="toc-absolute"></div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <article class="md-preview">
-                        {{content}}
-                    </article>
-                </div>
-                <div class="col-md-2">
-
-                </div>
+        <div class="article-wrapper">
+            <div class="article-left">
+                <article class="md-preview">
+                    {{content}}
+                </article>
             </div>
+            <nav class="navbar-side hidden">
+                <div id="toc" class="toc-absolute"></div>
+            </nav>
+        </div>
+        <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-12">
                     <div class="post-footer">
                         {{#author}}
                             <figure class="author-image">
@@ -63,8 +62,9 @@
                     </div>
                 </div>
             </div>
-            <a id="back_to_top" href="#"></a>
         </div>
+
+        <a id="back_to_top" href="#"></a>
         <aside class="read-next">
             {{#next_post}}
                 <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"
