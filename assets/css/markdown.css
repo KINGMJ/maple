@@ -91,6 +91,7 @@
     display: -webkit-flex;
     margin: 15px auto;
     max-width: 100%;
+    cursor: zoom-in;
 }
 
 .md-preview .code {

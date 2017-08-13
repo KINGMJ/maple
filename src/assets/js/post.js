@@ -1,7 +1,7 @@
 $(function () {
     //代码高亮
     hljs.initHighlightingOnLoad();
-    
+
     //如果文章没有标题不会初始化toc
     var has_toc = $('.md-preview h1,.md-preview h2,.md-preview h3').length > 0;
     if (has_toc) {
@@ -47,5 +47,20 @@ $(function () {
     $('#back_to_top').click(function () {
         $('html,body').animate({scrollTop: '0px'}, 600);
         return false;
+    });
+
+    //点击看大图
+    $('.md-preview img').click(function (e) {
+        $('#show_image_layer,#img_wrapper').removeClass('hidden');
+        var img_src = $(e.target).attr('src');
+        $('#img_wrapper img').attr('src', img_src);
+        $('body').css('overflow', 'hidden');
+    });
+
+    //退出大图模式
+    $('#img_wrapper').click(function () {
+        $('#show_image_layer,#img_wrapper').addClass('hidden');
+        $('#img_wrapper img').attr('src', '');
+        $('body').removeAttr('style');
     });
 });
