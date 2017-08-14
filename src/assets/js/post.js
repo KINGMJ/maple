@@ -51,22 +51,25 @@ $(function () {
 
     //点击看大图
     $('.md-preview img').click(function (e) {
-        $('#show_image_layer,#img_wrapper').removeClass('hidden');
-        var img_src = $(e.target).attr('src');
-        $('#img_wrapper img').attr('src', img_src);
-        $('body').css('overflow', 'hidden');
+        showFullScreenImg(e);
     });
 
     //退出大图模式
     $('#img_wrapper').click(function () {
-        $('#show_image_layer,#img_wrapper').addClass('hidden');
-        $('#img_wrapper img').attr('src', '');
-        $('body').removeAttr('style');
+        exitFullScreen();
     });
 
     //为超链接加上target='_blank'属性
     $(document).bind('DOMNodeInserted', function () {
         addBlankTargetForLinks();
+    });
+
+    //复制代码
+    $('.md-preview pre').hover(function () {
+        var div_copy_code = "<div class='copy-code-wrapper' onclick='copyCode(this);'>复制</div>";
+        if ($(this).children('.copy-code-wrapper').length <= 0) {
+            $(div_copy_code).prependTo($(this));
+        }
     });
 });
 
@@ -76,3 +79,32 @@ function addBlankTargetForLinks() {
         $(this).attr('target', '_blank');
     });
 }
+
+function showFullScreenImg(e) {
+    $('#show_image_layer,#img_wrapper').removeClass('hidden');
+    var img_src = $(e.target).attr('src');
+    $('#img_wrapper img').attr('src', img_src);
+    $('body').css('overflow', 'hidden');
+}
+
+function exitFullScreen() {
+    if ($('#show_image_layer').hasClass('hidden')) {
+        return;
+    }
+    $('#show_image_layer,#img_wrapper').addClass('hidden');
+    $('#img_wrapper img').attr('src', '');
+    $('body').removeAttr('style');
+}
+
+function copyCode(target) {
+
+}
+
+$(document).keydown(function (e) {
+    e = e || event;
+    if (e.keyCode == 27) // esc键
+    {
+        exitFullScreen();
+        return false;
+    }
+});
