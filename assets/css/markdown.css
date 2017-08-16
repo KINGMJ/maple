@@ -154,7 +154,6 @@ table tr th :last-child, table tr td :last-child {
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    position: relative;
 }
 
 .md-preview pre code {
