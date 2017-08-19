@@ -1,39 +1,39 @@
+$(document).keydown(function (e) {
+    e = e || event;
+    if (e.keyCode == 27) // esc键
+    {
+        exitFullScreen();
+        return false;
+    }
+});
+
 $(function () {
     //代码高亮
     hljs.initHighlightingOnLoad();
 
-    //如果文章没有标题不会初始化toc
+    //如果文章没有标题不会显示目录按钮
     var has_toc = $('.md-preview h1,.md-preview h2,.md-preview h3').length > 0;
     if (has_toc) {
-        //显示侧边栏
-        $('.navbar-side').removeClass('hidden');
-        $('.article-left').addClass('has-side');
-
-        //初始化toc
-        $('#toc').toc({
-            'selectors': 'h1,h2,h3', //elements to use as headings
-            'container': '.md-preview', //element to find all selectors in
-            'prefix': 'toc',
-            'highlightOffset': 1, //offset to trigger the next headline
-            'anchorName': function (i, heading, prefix) { //custom function for anchor name
-                return prefix + i;
-            }
-        });
+        $('.toggle-side-btn').removeClass('hidden');
     }
+
+    //显示侧边栏
+    $('.toggle-side-btn').click(function (e) {
+        showSlide(e);
+        setTimeout(function () {
+            setTocPosition();
+        }, 10);
+
+    });
+
+    $('.close-slide-btn').click(function (e) {
+        hideSlide(e);
+    });
 
 
     //toc滚动设置
     $(window).scroll(function () {
-        var max_height = $('.md-preview').offset().top + $('.md-preview').outerHeight() - $('#toc').outerHeight(),
-            scroll_top = $(window).scrollTop(),
-            header_height = $('header').outerHeight();
-        if (scroll_top <= header_height) {
-            $('#toc').removeClass('toc-fixed').addClass('toc-absolute').removeAttr('style');
-        } else if (scroll_top > header_height && scroll_top <= max_height) {
-            $('#toc').removeClass('toc-absolute').addClass('toc-fixed').removeAttr('style');
-        } else {
-            $('#toc').removeClass('toc-fixed').addClass('toc-absolute').css("top", max_height - $('.md-preview').offset().top);
-        }
+        setTocPosition();
     });
 
     //回到顶部
@@ -114,11 +114,51 @@ function copyCode(target) {
     });
 }
 
-$(document).keydown(function (e) {
-    e = e || event;
-    if (e.keyCode == 27) // esc键
-    {
-        exitFullScreen();
-        return false;
+// 显示侧边栏
+function showSlide(e) {
+    $(e.currentTarget).addClass('hidden');
+    $('.navbar-side').css('right', 0);
+    $('.article-left').addClass('has-side');
+    $('.close-slide-btn').removeClass('hidden');
+    //初始化toc
+    $('#toc').toc({
+        'selectors': 'h1,h2,h3', //elements to use as headings
+        'container': '.md-preview', //element to find all selectors in
+        'prefix': 'toc',
+        'highlightOffset': 1, //offset to trigger the next headline
+        'anchorName': function (i, heading, prefix) { //custom function for anchor name
+            return prefix + i;
+        }
+    });
+}
+
+//关闭侧边栏
+function hideSlide(e) {
+    $(e.currentTarget).addClass('hidden');
+    $('.navbar-side').css('right', '-265px');
+    setTimeout(function () {
+        $('.article-left').removeClass('has-side');
+        $('.toggle-side-btn ').removeClass('hidden');
+    }, 200);
+
+}
+
+//设置toc的位置
+function setTocPosition() {
+    var max_height = $('.md-preview').offset().top + $('.md-preview').outerHeight() - $('#toc').outerHeight(),
+        scroll_top = $(window).scrollTop(),
+        header_height = $('header').outerHeight();
+    if (scroll_top <= header_height) {
+        $('.toc-wrapper,.toggle-side-btn').removeClass('position-fixed').addClass('position-absolute').removeAttr('style');
+    } else if (scroll_top > header_height && scroll_top <= max_height) {
+        $('.toc-wrapper,.toggle-side-btn').removeAttr('style');
+        //解决切换position属性时，闪烁问题
+        setTimeout(function () {
+            $('.toc-wrapper,.toggle-side-btn').removeClass('position-absolute').addClass('position-fixed');
+        }, 10);
+    } else {
+        $('.toc-wrapper,.toggle-side-btn').removeClass('position-fixed').addClass('position-absolute');
+        $('.toc-wrapper').css("top", max_height - $('.md-preview').offset().top);
+        $('.toggle-side-btn').css("top", max_height);
     }
-});
+}

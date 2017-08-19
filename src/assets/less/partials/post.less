@@ -221,15 +221,20 @@
 
 .navbar-side {
   position: absolute;
-  right: 0;
+  right: -265px;
   top: 0;
   width: 260px;
   border-left: 1px solid @boder-color;
   height: 100%;
+  transition: all .2s;
 }
 
 .article-wrapper {
   position: relative;
+}
+
+.article-left {
+  transition: all 0s;
 }
 
 .article-left.has-side {
@@ -265,4 +270,33 @@
 
 .copy-code-wrapper:hover {
   text-decoration: none !important;
+}
+
+.toggle-side-btn {
+  background: rgba(0, 0, 0, .35);
+  padding: 10px 10px 10px 13px;
+  border-radius: 16px 0 0 16px;
+  font-size: 16px;
+  right: 0;
+  width: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  &:hover {
+    color: #fff;
+  }
+  &.position-absolute {
+    position: absolute;
+  }
+  &.position-fixed {
+    position: fixed;
+    top: 48px;
+  }
+  i {
+    animation: fa-spin 2s infinite linear;
+  }
+  span {
+    margin-top: 5px;
+    display: inline-block;
+  }
 }

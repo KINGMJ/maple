@@ -16,14 +16,24 @@
         </div>
     </header>
     <div class="site-content">
+        <a class="toggle-side-btn position-absolute hidden">
+            <i class="fa fa-cogs"></i>
+            <span>目录</span>
+        </a>
         <div class="article-wrapper">
             <div class="article-left">
                 <article class="md-preview">
                     {{content}}
                 </article>
             </div>
-            <nav class="navbar-side hidden">
-                <div id="toc" class="toc-absolute"></div>
+            <nav class="navbar-side">
+                <div class="toc-wrapper">
+                    <a class="close-slide-btn hidden">
+                        <span>关闭</span>
+                        <span></span>
+                    </a>
+                    <div id="toc"></div>
+                </div>
             </nav>
         </div>
         <div class="container">

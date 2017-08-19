@@ -1,56 +1,49 @@
 /*-------------------------文章toc目录---------------------------*/
+.toc-wrapper {
+  &.position-absolute {
+    position: absolute;
+  }
+  &.position-fixed {
+    position: fixed;
+    top: 0;
+  }
+}
+
 #toc {
   color: @font-black-color;
   padding-top: 30px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 5px 0;
+    }
+  }
+  a {
+    color: @font-black-color;
+    text-decoration: none;
+    display: block;
+    transition: none;
+    border-left: 3px solid transparent;
+    padding-left: 10px;
+  }
+  .toc-h2 {
+    padding-left: 12px;
+  }
+  .toc-h3 {
+    padding-left: 24px;
+  }
+  .toc-active {
+    border-left: 4px solid @link-color;
+    color: @link-color;
+    background-color: @toc-bg-color;
+    margin-left: -2px;
+    a {
+      color: @link-color;
+      margin-left: -2px;
+    }
+  }
 }
 
-#toc ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
-#toc li {
-  padding: 5px 0;
-}
-
-#toc a {
-  color: @font-black-color;
-  text-decoration: none;
-  display: block;
-  transition: none;
-}
-
-#toc .toc-h2 {
-  padding-left: 12px;
-}
-
-#toc .toc-h3 {
-  padding-left: 24px;
-}
-
-#toc a {
-  border-left: 3px solid transparent;
-  padding-left: 10px;
-}
-
-#toc .toc-active {
-  border-left: 4px solid @link-color;
-  color: @link-color;
-  background-color: @toc-bg-color;
-  margin-left: -2px;
-}
-
-#toc .toc-active a {
-  color: @link-color;
-  margin-left: -2px;
-}
-
-#toc.toc-absolute {
-  position: absolute;
-}
-
-#toc.toc-fixed {
-  position: fixed;
-  top: 0;
-}
