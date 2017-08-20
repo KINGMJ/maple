@@ -18,11 +18,10 @@
 }
 
 .md-preview blockquote {
-    font-family: 'Consolas';
     border-left: 4px solid #b4b4b4;
     padding: 10px 15px;
     color: #818181;
-    background-color: whitesmoke;
+    background-color: #f0f0f0;
     font-size: 16px;
 }
 
@@ -97,7 +96,7 @@
 .md-preview .code {
     padding: 2px 4px;
     white-space: nowrap;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace, 'Microsoft YaHei';
     color: #c7254e;
     background-color: #f9f2f4;
     border-radius: 4px;
@@ -142,13 +141,13 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre {
-    background-color: rgb(30, 30, 30);
+    background-color: #f7f7f9;
     font-size: 13px;
     line-height: 1.7;
     overflow: auto;
     padding: 6px 12px;
-    border-radius: 3px;
-    border: none;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     white-space: pre;
     word-spacing: normal;
@@ -157,7 +156,7 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre code {
-    color: rgb(220, 220, 220);
+    color: #333;
     white-space: pre;
     border: none;
     background: transparent;
