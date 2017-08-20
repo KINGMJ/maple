@@ -133,6 +133,7 @@ function showSlide(e) {
 //关闭侧边栏
 function hideSlide(e) {
     $('.navbar-side').css('right', '-268px');
+    $('#toc').empty();
     setTimeout(function () {
         $('.article-left').removeClass('has-side');
     }, 200);
