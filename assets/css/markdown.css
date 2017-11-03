@@ -14,7 +14,7 @@
 }
 
 .md-preview p {
-    line-height: 2.1;
+    line-height: 1.9;
 }
 
 .md-preview blockquote {
@@ -45,14 +45,13 @@
 .md-preview h1 {
     font-size: 32px;
     border-bottom: 1px solid #dedede;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
     font-weight: 600;
 }
 
 .md-preview h2 {
-    font-size: 27px;
+    font-size: 28px;
     font-weight: 600;
+    border-bottom: 1px solid #dedede;
 }
 
 .md-preview h3 {

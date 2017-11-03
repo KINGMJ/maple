@@ -25,11 +25,17 @@ gulp.task('js', function () {
         .pipe(gulp.dest('assets/js'))
 });
 
-
-gulp.task('auto', function () {
-    // 监听文件修改，当文件被修改则执行 images 任务
+gulp.task('watch_less', function () {
     gulp.watch('src/assets/less/**/*.less', ['less'])
 });
+
+gulp.task('watch_js', function () {
+    gulp.watch('src/assets/js/**/*.js', ['js'])
+});
+
+
+//文件监听
+gulp.task('auto', ['watch_less', 'watch_js']);
 
 //生产环境
 gulp.task('build', ['less', 'js']);
