@@ -1,23 +1,27 @@
 {
   "name": "maple",
-  "version": "2.1",
+  "version": "3.1.0",
   "description": "A Ghost theme focused on content designed by jerry.mei",
-  "url": "http://www.maplejoyous.cn",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KINGMJ/maple.git"
+  },
+  "keywords": [
+    "ghost",
+    "blog",
+    "theme",
+    "maple"
+  ],
   "author": {
     "name": "Jerry Mei",
     "email": "328047478@qq.com",
     "url": "http://www.maplejoyous.cn"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:KINGMJ/maple.git"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KINGMJ/maple/issues"
   },
-  "keywords": [
-    "ghost",
-    "blog",
-    "theme"
-  ],
+  "homepage": "https://github.com/KINGMJ/maple#readme",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",

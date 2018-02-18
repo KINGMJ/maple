@@ -1,5 +1,6 @@
 {{!< default}}
-<header style="background-image: url({{#if tag.image}}{{tag.image}}{{else}}{{@blog.cover}}{{/if}})" class="tag-header">
+<header style="background-image: url({{#if tag.feature_image}}{{tag.feature_image }}{{else}}{{@blog.cover_image}}{{/if}})"
+        class="tag-header">
     <div class="tag-header-container">
         <div class="tag-nav">
             <a href="{{@blog.url}}">HOME</a>

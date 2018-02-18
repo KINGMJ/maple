@@ -1,0 +1,15 @@
+{{#if navigation}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-9">
+                <nav class="main-nav">
+                    <ul class="menu">
+                        {{#foreach navigation}}
+                            <li><a href="{{url}}" target="_blank">{{label}}</a></li>
+                        {{/foreach}}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+{{/if}}

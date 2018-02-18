@@ -8,7 +8,7 @@
                         {{#foreach recents}}
                             <div class="recent-single-post">
                                 <a href="{{url}}" class="footer-post-cover"
-                                   style="background-image: url({{image}})"></a>
+                                   style="background-image: url({{feature_image}})"></a>
                                 <div class="footer-post-info">
                                     <h4 class="footer-post-title"><a href="{{url}}">{{title}}</a></h4>
                                     <div class="footer-post-date">
@@ -24,26 +24,18 @@
             <div class="col-md-4">
                 <h4 class="footer-content-title">标签云</h4>
                 <div class="footer-content-tags">
-                    {{tag_cloud limit=10}}
                     <a href="/tag_cloud">...</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <h4 class="footer-content-title">友情链接</h4>
                 <div class="footer-friend-links">
-                    <a href="https://www.leangoo.com">Leangoo协作工具</a>
-                    <a href="https://ghost.org/">Ghost博客</a>
-                    <a href="http://blog.aiboms.cn/">大亮的技术博客</a>
+                    {{> config/friend-link}}
                 </div>
 
                 <h4 class="footer-content-title">FOLLOW ME</h4>
                 <div class="footer-follow-social">
-                    <a href="http://weibo.com/jerrymei666" target="_blank"><i class="fa fa-weibo"></i></a>
-                    <a href="https://github.com/KINGMJ" target="_blank"><i class="fa fa-github"></i></a>
-                    <a href="https://plus.google.com/105363350660486192196" target="_blank"><i
-                            class="fa fa-google-plus"></i></a>
-                    <a href="http://www.linkedin.com/in/%E6%9D%B0-%E6%A2%85-77110410b/" target="_blank"><i
-                            class="fa fa-linkedin"></i></a>
+                    {{> config/follow}}
                 </div>
             </div>
         </div>

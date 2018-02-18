@@ -140,13 +140,14 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre {
-    background-color: #f7f7f9;
+    background: url(../images/blueprint.png) #f7f7f9;
+    background-size: 60px, 60px;
+    border-radius: 0;
+    border: none;
     font-size: 13px;
     line-height: 1.7;
     overflow: auto;
     padding: 6px 12px;
-    border: 1px solid #e1e1e8;
-    border-radius: 4px;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     white-space: pre;
     word-spacing: normal;
