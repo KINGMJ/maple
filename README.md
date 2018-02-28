@@ -1,4 +1,3 @@
-# maple
-IT's a theme about ghost
+这是一个推荐的 Ghost Theme 文件结构
 
-支持v1.x
+文件夹里的 README.md 没有任何用处，可以自行删除
