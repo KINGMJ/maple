@@ -1,4 +1,10 @@
 $(function () {
+    //点击向下的箭头滚动到文章区域
+    $('.indicator').click(function () {
+        var scrollTop = $('.site-content').offset().top;
+        $('html,body').animate({scrollTop: scrollTop}, 500);
+    });
+
     //瀑布流初始化
     $('.grid').masonry({
         columnWidth: 'article',
@@ -6,16 +12,10 @@ $(function () {
         percentPosition: true
     });
 
-    //点击向下的箭头滚动到文章区域
-    $('.indicator').click(function () {
-        var scrollTop = $('.site-content').offset().top;
-        $('body').animate({scrollTop: scrollTop}, 600);
-    });
-
     //默认滚动到文章列表
     if ($('body').hasClass('paged')) {
         var scrollTop = $('.site-content').offset().top;
-        $('body').animate({scrollTop: scrollTop}, 0);
+        $('html,body').animate({top: scrollTop}, 0);
         $('.site-header').removeClass('invisible');
     }
 
@@ -30,7 +30,6 @@ $(function () {
 });
 
 function onSuccess(data) {
-    console.log(data);
     var html = '';
     $.each(data.tags, function (i, tag) {
         var backgroundImage = 'background-image:url(' + tag.feature_image + ')';
@@ -45,6 +44,4 @@ function onSuccess(data) {
         var tag_count = $('.tags-container a').length;
         $('.tag-post-num .num').text(tag_count);
     }
-
-
 }

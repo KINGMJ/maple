@@ -27,7 +27,7 @@
 
 .header-middle-content {
   text-align: center;
-  margin-top: -60px;
+  position: relative;
 }
 
 .site-title, .site-description {
@@ -54,6 +54,9 @@
       margin: 0 10px;
       a {
         .social-icon-mixin;
+        &:hover {
+          border: solid 2px rgba(255, 255, 255, .65);
+        }
       }
     }
   }

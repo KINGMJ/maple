@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
-var minifycss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 
 //编译、合并、压缩less文件
@@ -14,7 +14,7 @@ gulp.task('less', function () {
             browsers: ['last 2 versions', 'Android >= 4.0'],
             cascade: false
         }))
-        .pipe(minifycss())
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('assets/css'))
 });
 
