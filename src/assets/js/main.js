@@ -1,4 +1,9 @@
 $(function () {
+    //随机显示博客封面
+    if (Maple.enableRandomCover) {
+        randomSiteCover();
+    }
+
     //点击向下的箭头滚动到文章区域
     $('.indicator').click(function () {
         var scrollTop = $('.site-content').offset().top;
@@ -44,4 +49,12 @@ function onSuccess(data) {
         var tag_count = $('.tags-container a').length;
         $('.tag-post-num .num').text(tag_count);
     }
+}
+
+/**
+ * 随机生成博客封面
+ */
+function randomSiteCover() {
+    var randomNum = Math.floor(Math.random() * 30 + 1);
+    $('.site-header').css('background-image', "url(assets/images/30+wallpaper/bg-cover" + randomNum + ".jpg)");
 }
