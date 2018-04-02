@@ -10,20 +10,13 @@ $(function () {
         $('html,body').animate({scrollTop: scrollTop}, 500);
     });
 
-    //瀑布流初始化
-    $('.grid').masonry({
-        columnWidth: 'article',
-        itemSelector: 'article',
-        percentPosition: true
-    });
-
     //默认滚动到文章列表
     if ($('body').hasClass('paged')) {
         var scrollTop = $('.site-content').offset().top;
         $('html,body').animate({top: scrollTop}, 0);
         $('.site-header').removeClass('invisible');
     }
-
+    
     //标签云
     $.get(
         ghost.url.api('tags', {
