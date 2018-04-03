@@ -13,14 +13,14 @@ $(function () {
     //默认滚动到文章列表
     if ($('body').hasClass('paged')) {
         var scrollTop = $('.site-content').offset().top;
-        $('html,body').animate({top: scrollTop}, 0);
+        $('html,body').animate({scrollTop: scrollTop}, 0);
         $('.site-header').removeClass('invisible');
     }
 
     //标签云
     $.get(
         ghost.url.api('tags', {
-            limit: 'all',
+            limit: 24,
             include: 'count.posts',
             order: 'count.posts DESC'
         })
