@@ -7,7 +7,8 @@
 						<!--post封面-->
 						<div class="post-cover">
 							<a class="cover-image cover-transition" href="{{url}}"
-							   style="background-image: url({{feature_image}})"></a>
+							   style="background-image: url({{#if feature_image}}{{feature_image}}
+							   {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})"></a>
 							{{#if tags}}
 								<div class="cover-bottom">
 									<div class="post-tags">
@@ -25,7 +26,7 @@
 							</p>
 							<div class="post-date">
 								<i class="fa fa-clock-o"></i>
-								<span style="margin: 0 5px;">发表于</span>
+								<span>发表于</span>
 								<span>{{date format="YYYY年MM月DD日"}}</span>
 							</div>
 						</div>

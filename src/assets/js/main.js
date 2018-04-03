@@ -16,7 +16,7 @@ $(function () {
         $('html,body').animate({top: scrollTop}, 0);
         $('.site-header').removeClass('invisible');
     }
-    
+
     //标签云
     $.get(
         ghost.url.api('tags', {
@@ -49,5 +49,5 @@ function onSuccess(data) {
  */
 function randomSiteCover() {
     var randomNum = Math.floor(Math.random() * 30 + 1);
-    $('.site-header').css('background-image', "url(assets/images/30+wallpaper/bg-cover" + randomNum + ".jpg)");
+    $('.site-header').css('background-image', "url(" + Maple.blogUrl + "/assets/images/30+wallpaper/bg-cover" + randomNum + ".jpg)");
 }
