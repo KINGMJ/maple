@@ -9,18 +9,36 @@
   height: 48vh;
   &:before {
     .cover-mixin;
-    background: linear-gradient(to bottom, rgba(56, 56, 56, .5), rgba(56, 56, 56, .2) 100%);
+    background: linear-gradient(to bottom, rgba(56, 56, 56, .75), rgba(56, 56, 56, .35) 100%);
   }
   .post-content {
     text-align: center;
     margin-top: 65px;
-  }
-  .post-title {
-    color: #fff;
-    font-size: 48px;
-    font-family: "Josefin Sans", sans-serif;
-    text-align: center;
-    margin-bottom: 18px;
+    font-family: 'Microsoft YaHei', 'Open Sans', sans-serif;
+    .post-title {
+      color: #fff;
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .post-tags {
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+      a {
+        margin-right: 10px;
+      }
+    }
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        &:not(:first-child):before {
+          content: "•";
+          padding: 0 .9rem 0 .6rem;
+        }
+      }
+    }
   }
   .post-nav {
     position: absolute;
@@ -38,17 +56,6 @@
         background: rgba(255, 255, 255, .2);
         border-color: rgba(255, 255, 255, .6);
       }
-    }
-  }
-  .post-author {
-    margin-left: 10px;
-  }
-  .post-tags {
-    position: absolute;
-    left: 0;
-    bottom: 12px;
-    a {
-      margin-right: 10px;
     }
   }
 }
