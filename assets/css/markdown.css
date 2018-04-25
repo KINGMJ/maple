@@ -22,7 +22,8 @@
     padding: 10px 15px;
     color: #818181;
     background-color: whitesmoke;
-    font-size: 16px;
+    font-size: 14px;
+    font-style: italic;
 }
 
 .md-preview blockquote > :last-child {
