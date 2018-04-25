@@ -18,10 +18,10 @@
 }
 
 .md-preview blockquote {
-    border-left: 4px solid #b4b4b4;
+    border-left: 4px solid #179bb2;
     padding: 10px 15px;
     color: #818181;
-    background-color: #f0f0f0;
+    background-color: whitesmoke;
     font-size: 16px;
 }
 
@@ -44,14 +44,15 @@
 
 .md-preview h1 {
     font-size: 32px;
-    border-bottom: 1px solid #dedede;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .md-preview h2 {
     font-size: 28px;
     font-weight: 600;
-    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
 
 .md-preview h3 {
@@ -72,7 +73,7 @@
 
 .md-preview hr {
     border: none;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid #eee;
 
 }
 
@@ -141,10 +142,10 @@ table tr th :last-child, table tr td :last-child {
 
 .md-preview pre {
     background: url(../images/blueprint.png) #f7f7f9;
-    background-size: 60px, 60px;
+    background-size: 54px, 54px;
     border-radius: 0;
     border: none;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.7;
     overflow: auto;
     padding: 6px 12px;
@@ -162,10 +163,14 @@ table tr th :last-child, table tr td :last-child {
     background: transparent;
 }
 
+.md-preview pre code span {
+    background: transparent;
+}
+
 .highlight pre {
     background-color: #f8f8f8;
     border: 1px solid #cccccc;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 19px;
     overflow: auto;
     padding: 6px 10px;
