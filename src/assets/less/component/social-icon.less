@@ -1,0 +1,41 @@
+//header里面的社会化icon
+.site-social-navigation {
+  margin-top: 40px;
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 10px;
+      a {
+        .social-icon-mixin;
+        &:hover {
+          border: solid 2px rgba(255, 255, 255, .65);
+        }
+      }
+    }
+  }
+}
+
+//footer里面的社会化icon
+.footer-follow-social {
+  text-align: left;
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  a {
+    font-size: 18px;
+    margin: 0 18px 0 12px;
+    color: @font-white-color;
+    &:hover {
+      color: @link-color;
+    }
+  }
+}
+
+.post-author-social {
+  list-style: none;
+  display: flex;
+}

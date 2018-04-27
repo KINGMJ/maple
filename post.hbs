@@ -34,42 +34,63 @@
 				</div>
 			</nav>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="post-footer">
-						{{#author}}
-							<figure class="author-image">
-								<a href="{{url}}" style="background-image: url({{img_url profile_image}})"></a>
-							</figure>
-							<section class="author">
-								<h4>
-									<a href="{{url}}">{{name}}</a>
-								</h4>
-								<p>{{bio}}</p>
-								<div class="author-meta">
-									<span><i class="fa fa-map-marker"></i>{{location}}</span>
-									<span><i class="fa fa-link"></i>{{website}}</span>
-								</div>
-							</section>
-							<section class="share">
-								<h4>分享这篇文章</h4>
-								<div class="share-icons">
-									<a class="icon-share icon-weibo" href="">
-										<i class="fa fa-weibo"></i>
-									</a>
-									<a class="icon-share icon-github" href="">
-										<i class="fa fa-github"></i>
-									</a>
-									<a class="icon-share icon-facebook" href="">
-										<i class="fa fa-facebook"></i>
-									</a>
-								</div>
-							</section>
-						{{/author}}
-					</div>
+
+
+		<div class="post-footer">
+			{{#author}}
+				<div class="post-author">
+					<figure class="author-image">
+						<a href="{{url}}" style="background-image: url({{img_url profile_image}})"></a>
+					</figure>
+					<section class="author-info">
+						<h4>
+							<a href="{{url}}">{{name}}</a>
+						</h4>
+						<p>{{bio}}</p>
+						<ul class="post-author-social">
+							{{> custom/social-icon}}
+						</ul>
+						<div class="author-meta">
+							<span><i class="fa fa-map-marker"></i>{{location}}</span>
+							<span><i class="fa fa-link"></i>{{website}}</span>
+						</div>
+					</section>
 				</div>
-			</div>
+			{{/author}}
+			<!--<div class="row">-->
+			<!--<div class="col-md-12">-->
+			<!--<div class="post-footer">-->
+			<!---->
+			<!--<figure class="author-image">-->
+			<!--<a href="{{url}}" style="background-image: url({{img_url profile_image}})"></a>-->
+			<!--</figure>-->
+			<!--<section class="author">-->
+			<!--<h4>-->
+			<!--<a href="{{url}}">{{name}}</a>-->
+			<!--</h4>-->
+			<!--<p>{{bio}}</p>-->
+			<!--<div class="author-meta">-->
+			<!--<span><i class="fa fa-map-marker"></i>{{location}}</span>-->
+			<!--<span><i class="fa fa-link"></i>{{website}}</span>-->
+			<!--</div>-->
+			<!--</section>-->
+			<!--<section class="share">-->
+			<!--<h4>分享这篇文章</h4>-->
+			<!--<div class="share-icons">-->
+			<!--<a class="icon-share icon-weibo" href="">-->
+			<!--<i class="fa fa-weibo"></i>-->
+			<!--</a>-->
+			<!--<a class="icon-share icon-github" href="">-->
+			<!--<i class="fa fa-github"></i>-->
+			<!--</a>-->
+			<!--<a class="icon-share icon-facebook" href="">-->
+			<!--<i class="fa fa-facebook"></i>-->
+			<!--</a>-->
+			<!--</div>-->
+			<!--</section>-->
+			<!--</div>-->
+			<!--</div>-->
+			<!--</div>-->
 		</div>
 
 		<a id="back_to_top" href="#"></a>
