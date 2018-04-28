@@ -135,15 +135,21 @@
         }
       }
       p {
-        margin: 15px 0;
-        line-height: 1.75;
+        margin: 20px 0;
+        line-height: 1.9;
       }
       .author-meta {
-        margin: 15px 0;
+        margin: 20px 0 15px;
         font-size: 14px;
         line-height: 1;
         font-style: italic;
         color: @font-grey-color;
+        a {
+          color: @font-grey-color;
+          &:hover {
+            color: #333;
+          }
+        }
         span {
           display: inline-block;
           margin-right: 20px;
@@ -153,48 +159,8 @@
           }
         }
       }
-
     }
   }
-}
-
-.share-icons {
-  margin: 15px 0;
-  display: flex;
-}
-
-.icon-share {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
-  border-radius: 50%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
-.icon-share:hover {
-  background-color: grey !important;
-}
-
-.icon-share.icon-weibo {
-  background: #e6162d;
-}
-
-.icon-share.icon-github {
-  background: #333;
-}
-
-.icon-share.icon-facebook {
-  background: #2aa9e0;
-}
-
-.icon-share i {
-  font-size: 24px;
-  color: #fff;
 }
 
 #back_to_top {
@@ -207,28 +173,9 @@
   background: url("../images/rocket.png") no-repeat center center rgba(0, 0, 0, 0.55);
   border-radius: 4px;
   background-size: 80%;
-}
-
-#back_to_top:hover {
-  background: url("../images/rocket.png") no-repeat center center rgba(0, 0, 0, 0.35);
-  background-size: 80%;
-}
-
-@media (min-width: 992px) {
-  .read-next-story .post {
-    padding: 60px 40px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .read-next-story .post {
-    padding: 80px 40px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .read-next-story .post {
-    padding: 160px 40px;
+  &:hover {
+    background: url("../images/rocket.png") no-repeat center center rgba(0, 0, 0, 0.35);
+    background-size: 80%;
   }
 }
 
@@ -248,20 +195,17 @@
 
 .article-left {
   transition: all 0s;
-}
-
-.article-left.has-side {
-  margin-right: 260px;
-}
-
-.article-left .md-preview {
-  width: 65%;
-  margin: 0 auto;
-  max-width: 970px;
-}
-
-.article-left.has-side .md-preview {
-  width: 80%;
+  &.has-side {
+    margin-right: 260px;
+    .md-preview {
+      width: 80%;
+    }
+  }
+  .md-preview {
+    width: 65%;
+    margin: 0 auto;
+    max-width: 970px;
+  }
 }
 
 .copy-code-wrapper {
@@ -281,5 +225,4 @@
   &:hover {
     text-decoration: none !important;
   }
-
 }
