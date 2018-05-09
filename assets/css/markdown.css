@@ -143,10 +143,10 @@ table tr th :last-child, table tr td :last-child {
 
 .md-preview pre {
     background: url(../images/blueprint.png) #f7f7f9;
-    background-size: 54px, 54px;
+    background-size: 36px, 24px;
     border-radius: 0;
     border: none;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.7;
     overflow: auto;
     padding: 6px 12px;
