@@ -1,5 +1,5 @@
 {{!< default}}
-<header style="background-image: url({{@blog.cover_image}})" class="tag-header">
+<header {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}} class="tag-header">
     <div class="tag-header-container">
         <div class="tag-nav">
             <a href="{{@blog.url}}">HOME</a>
@@ -11,7 +11,6 @@
             <i class="fa fa-signal"></i><span>共 <span class="num"></span> 个标签</span>
         </div>
     </div>
-
 </header>
 <div class="site-content">
     <div class="container">

@@ -30,9 +30,12 @@ $(function () {
 function onSuccess(data) {
     var html = '';
     $.each(data.tags, function (i, tag) {
-        var backgroundImage = 'background-image:url(' + tag.feature_image + ')';
-        html += "<a href='/tag/" + tag.slug + "' style='" + backgroundImage + "'>" +
-            "<div class='overlay'><h2>" + tag.name + "</h2><button class='info'>Show</button></div></a>";
+        html += "<a href='/tag/" + tag.slug + "'";
+        if (tag.feature_image !== null) {
+            var backgroundImage = 'background-image:url(' + tag.feature_image + ')';
+            html += "style='" + backgroundImage + "'";
+        }
+        html += "><div class='overlay'><h2>" + tag.name + "</h2><button class='info'>Show</button></div></a>";
     });
     $(html).prependTo($('.footer-content-tags'));
 
