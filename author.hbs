@@ -1,16 +1,26 @@
 {{!< default}}
-<header>
-	<div class="header-top">
-		{{navigation}}
+
+<div class="author-page">
+	<header>
+		<div class="header-top">
+			{{navigation}}
+		</div>
+	</header>
+
+	<div class="author-container">
+		<div class="plane-wrapper">
+			<img src="{{asset 'images/plane.svg'}}" alt="">
+			<div class="rotate-container">
+				<img src="{{asset 'images/propeller.svg'}}" alt="">
+			</div>
+		</div>
 	</div>
-</header>
+
+
+</div>
 
 
 
 
 
-{{#author}}
-	{{name}}
-{{/author}}
 
-{{> copyright}}
