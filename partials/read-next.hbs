@@ -1,0 +1,10 @@
+<div class="read-next-story">
+	<div class="read-next-media">
+		<a href="{{url}}" {{#if feature_image}}
+		style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}"></a>
+	</div>
+	<div class="read-next-content">
+		<h3><a href="{{url}}">{{title}}</a></h3>
+		<p>{{excerpt words="16"}}&hellip;</p>
+	</div>
+</div>
