@@ -142,7 +142,7 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .md-preview pre {
-    background: url(../images/blueprint.png) #f7f7f9;
+    background: url(../../../assets/images/blueprint.png) #f7f7f9;
     background-size: 36px, 24px;
     border-radius: 0;
     border: none;
