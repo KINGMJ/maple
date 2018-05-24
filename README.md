@@ -43,7 +43,6 @@ Maple 主题简单美观，基于 Medium Design 现代化设计，采用响应�
 2. 使用下面的命令克隆主题仓库
     ```
     $ git clone https://github.com/KINGMJ/maple.git
-    
     ```
 3. 重启 Ghost 并进入后台管理系统
 4. 进入`Design`页面，选择`maple`主题，点击`ACTIVE`
@@ -106,11 +105,11 @@ Maple 主题目前使用 Google Analytics 作为网站的统计分析工具，�
 Ghost1.x 的版本，将后台修改每页显示文章数功能挪到了主题配置中，所以需要修改主题配置文件才能更改。
 1. 编辑`package.json`文件
 2. 找到下面这段代码，将`posts_per_page`的值修改为你每页需要显示的文章数
-```
-"config": {
+    ```
+    "config": {
     "posts_per_page": 8
-  },
-```
+    },
+    ```
 
 > PS：主题所有的修改，都需要重启Ghost才生效，不要忘记了
 
