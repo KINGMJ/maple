@@ -33,6 +33,7 @@ Maple 主题简单美观，基于 Medium Design 现代化设计，采用响应�
 - 个性化配置
 - 自定义社会化 icon
 - Markdown 样式重新设计
+
 ![image_1ce828agq1gra23ji9d1gd8105u15.png-1325.4kB][4]
 
 ## ⚙️ 安装
@@ -70,10 +71,11 @@ ghost 默认是没有标签云页面的，在 Maple 主题中是通过将文章�
 
 ### 友链及社会化 icon 配置
 社会化 icon 会显示在主页的 header 和 footer 里，以及文章详情页的作者介绍里面。为了让主题使用者修改方便，在 Maple 主题的资源文件中，我专门建立了一个`custom`文件夹来放一些配置相关的内容。
+
 ![image_1ce6n0t2niumh093991s2l1j4h2t.png-7.6kB][12]
 
 1. 进入主题 `maple/partials/custom`文件夹
-2. 编辑`social-icon.hbs`，将里面的链接和图标替换成你自己的社会化 icon 和地址。**注：图标使用的是 [font-awesome][13] 的图标**
+2. 编辑`social-icon.hbs`，将里面的链接和图标替换成你自己的图标和地址。**注：图标使用的是 [font-awesome][13]**
 3. 编辑`friend-link.hbs`，将里面的地址替换成你自己的友链
 
 ### 主页封面配置
@@ -85,6 +87,7 @@ ghost 默认是没有标签云页面的，在 Maple 主题中是通过将文章�
 
 ### copyright 信息设置
 使用 Maple 主题后，请将网页底部的 copyright 信息修改为你自己的。只需修改**博客名称**及**备案号**信息，请保留博客发版信息及主题作者信息，谢谢合作！
+
 ![image_1ce6nvgdm17ib1p0h1k6p16391co13q.png-11kB][14]
 1. 进入主题`maple/partials`文件夹
 2. 编辑`copyright.hbs`，修改博客名及备案信息
