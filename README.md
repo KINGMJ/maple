@@ -65,9 +65,12 @@ Maple 主题简单美观，基于 Medium Design 现代化设计，采用响应�
 ghost 默认是没有标签云页面的，在 Maple 主题中是通过将文章设置为独立页面完成的。
 1. 进入 ghost 后台管理系统，新建一篇文章，标题为`tag_cloud`
 2. 点击文章设置，`Post URL`填写`tag_cloud`
-![image_1ce6mfc4r5mi1a0k1dmu1f0f6m113.png-10.9kB][10]
+
+    ![image_1ce6mfc4r5mi1a0k1dmu1f0f6m113.png-10.9kB][10]
+
 3. 设置这篇文章为独立页面
-![image_1ce6mhl6r14a2103m1p8n8t7em92g.png-18.6kB][11]
+
+    ![image_1ce6mhl6r14a2103m1p8n8t7em92g.png-18.6kB][11]
 
 ### 友链及社会化 icon 配置
 社会化 icon 会显示在主页的 header 和 footer 里，以及文章详情页的作者介绍里面。为了让主题使用者修改方便，在 Maple 主题的资源文件中，我专门建立了一个`custom`文件夹来放一些配置相关的内容。
