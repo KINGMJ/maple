@@ -11,9 +11,17 @@ Maple 主题简单美观，基于 Medium Design 现代化设计，采用响应�
 
 - [特性](#️-特性)
 - [安装](#️-安装)
-- [配置](#-配置)
-- [Roadmap](#-roadmap)
-- [Copyright & License](#-copyright--license)
+    - [使用 Git](#使用-git)
+    - [直接下载](#直接下载)
+- [配置](#️-配置)
+    - [标签云页面](#标签云页面)
+    - [友链及社会化-icon-配置](#友链及社会化-icon-配置)
+    - [主页封面配置](#主页封面配置)
+    - [copyright 信息设置](#copyright-信息设置)
+    - [google 分析设置](#google-分析设置)
+    - [每页显示文章设置](#每页显示文章设置)
+- [Roadmap](#️-roadmap)
+- [Copyright & License](#️-copyright--license)
 
 ## 🏷️ 特性
 
@@ -25,7 +33,6 @@ Maple 主题简单美观，基于 Medium Design 现代化设计，采用响应�
 - 个性化配置
 - 自定义社会化 icon
 - Markdown 样式重新设计
-
 ![image_1ce828agq1gra23ji9d1gd8105u15.png-1325.4kB][4]
 
 ## ⚙️ 安装
