@@ -1,6 +1,6 @@
 {
   "name": "maple",
-  "version": "3.1.1",
+  "version": "3.2.1",
   "engines": {
     "ghost": ">=1.0.0"
   },
@@ -13,6 +13,7 @@
     "ghost",
     "blog",
     "theme",
+    "ghost-theme",
     "maple"
   ],
   "author": {
@@ -21,7 +22,7 @@
     "url": "http://www.maplejoyous.cn"
   },
   "config": {
-    "posts_per_page": 8
+    "posts_per_page": 9
   },
   "license": "MIT",
   "bugs": {

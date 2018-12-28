@@ -1,45 +1,53 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			{{#foreach posts}}
-				<article class="col-md-4 col-sm-6 post">
-					<div class="post-card">
-						<!--post封面-->
-						<div class="post-cover">
-							<a class="cover-image cover-transition" href="{{url}}"
-							   style="background-image: url({{#if feature_image}}{{feature_image}}
-							   {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})"></a>
-							{{#if tags}}
-								<div class="cover-bottom">
-									<div class="post-tags">
-										{{#foreach tags limit=4}}
-											<a href="{{url}}">{{name}}</a>
-										{{/foreach}}
-									</div>
-								</div>
-							{{/if}}
-						</div>
-						<div class="post-info">
-							<h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
-							<p class="post-summary">
-								{{excerpt characters="60"}}...
-							</p>
-							<div class="post-date">
-								<i class="fa fa-clock-o"></i>
-								<span>发表于</span>
-								<span>{{date format="YYYY年MM月DD日"}}</span>
-							</div>
-						</div>
-					</div>
-				</article>
-			{{/foreach}}
-		</div>
-		<div class="col-md-12">
-			{{#if pagination}}
-				{{pagination}}
-			{{/if}}
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-12">
+            {{#foreach posts}}
+                <article class="col-md-4 col-sm-6 post">
+                    <div class="post-card">
+                        <!--post封面-->
+                        <div class="post-cover">
+                            <a class="cover-image cover-transition" href="{{url}}"
+                               style="background-image: url({{#if feature_image}}{{feature_image}}
+                               {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})"></a>
+                            {{#if tags}}
+                                <div class="cover-bottom">
+                                    <div class="post-tags">
+                                        {{#foreach tags limit=4}}
+                                            <a href="{{url}}">{{name}}</a>
+                                        {{/foreach}}
+                                    </div>
+                                </div>
+                            {{/if}}
+                        </div>
+                        <div class="post-info">
+                            <div class="item-content">
+                                <h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
+                                <p class="post-summary">
+                                    {{excerpt characters="40"}}...
+                                </p>
+                            </div>
+                            <div class="item-footer">
+                                <div class="post-date">
+                                    <div>
+                                        <i class="fa fa-clock-o"></i>
+                                        <span>{{date format="YYYY/MM/DD"}}</span>
+                                    </div>
+                                   <div>
+                                       <span>{{reading_time}}</span>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            {{/foreach}}
+        </div>
+        <div class="col-md-12">
+            {{#if pagination}}
+                {{pagination}}
+            {{/if}}
+        </div>
+    </div>
 </div>
 
 

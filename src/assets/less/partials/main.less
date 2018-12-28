@@ -1,10 +1,10 @@
 body {
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   background-color: @background-color;
 }
 
 .site-content {
-  padding-top: 48px;
+  padding-top: 25px;
   margin-bottom: 48px;
   overflow-x: hidden;
 }
@@ -13,23 +13,20 @@ a {
   color: #179BB2;
   transition: all ease 0.3s;
   text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  color: #179BB2;
-  text-decoration: none;
-}
-
-a:active {
-  text-decoration: none;
-}
-
-a:focus {
-  outline: none;
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    color: @link-color;
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 #show_image_layer {

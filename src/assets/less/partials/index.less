@@ -12,13 +12,13 @@
 }
 
 .post-card {
-  box-shadow: 0 2px 5px 0 #CCCBCB;
+  box-shadow: 5px 8px 40px rgba(30, 30, 30, .08), 1px 3px 8px rgba(30, 30, 30, .04);
   transition: all 0.4s ease;
 }
 
 .post-card:hover {
-  box-shadow: 0 2px 8px 4px #E9E9E9;
-  transform: translate(0, -5px);
+  box-shadow: 0 2px 38px 4px rgba(30, 30, 30, .12);
+  transform: translate(0, -4px);
 }
 
 .post-cover {
@@ -84,9 +84,10 @@
 /*post详情*/
 .post-info {
   background-color: #fcfcfc;
-  position: relative;
-  overflow: hidden;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 20px;
   height: 210px;
   font-family: '-apple-system', 'Open Sans', 'Microsoft YaHei', sans-serif;
   .post-title {
@@ -110,24 +111,10 @@
     word-wrap: normal;
   }
   .post-date {
-    position: absolute;
-    bottom: 0;
-    padding: 15px 0;
     color: #717f8e;
     font-size: 12px;
+    display: flex;
+    justify-content: space-between;
   }
 }
-
-//.post-tags-on-content {
-//  position: absolute;
-//  bottom: 40px;
-//  a {
-//    margin-right: 10px;
-//    color: #717f8e;
-//    &:hover {
-//      color: @link-color;
-//    }
-//  }
-//}
-
 

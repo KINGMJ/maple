@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="prev-next-wrap">
+			{{#prev_post}}
+				<article class="prev-next-item">
+					<a href="{{url}}" class="prev-next-image"
+					   style="background-image: url({{feature_image}})">
+					</a>
+					<div class="prev-next-content">
+						<a href="{{url}}" class="link">上一篇</a>
+						<a href="{{url}}" class="title">{{title}}</a>
+						<p class="date">发表于 {{date format="YYYY/MM/DD"}}</p>
+					</div>
+				</article>
+			{{/prev_post}}
+
+			{{#next_post}}
+				<article class="prev-next-item">
+					<a href="{{url}}" class="prev-next-image"
+					   style="background-image: url({{feature_image}})">
+					</a>
+					<div class="prev-next-content">
+						<a href="{{url}}" class="link">下一篇</a>
+						<a href="{{url}}" class="title">{{title}}</a>
+						<p class="date">发表于 {{date format="YYYY/MM/DD"}}</p>
+					</div>
+				</article>
+			{{/next_post}}
+		</div>
+	</div>
+</div>

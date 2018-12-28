@@ -3,11 +3,15 @@
   left: -40px;
   width: 30px;
   top: 30px;
-  height: 70px;
+  height: 80px;
   background: @link-color;
   color: #fff;
   cursor: pointer;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   &:hover {
     color: #fff;
   }
@@ -15,13 +19,12 @@
     &:first-child {
       width: 1px;
       display: inline-block;
-      margin-left: 8px;
-      margin-top: 6px;
+      margin-left: -11px;
+      margin-top: 8px;
     }
     &:last-child {
       width: 0;
       height: 0;
-      top: -12px;
       border-left: 15px solid transparent;
       border-right: 15px solid transparent;
       border-bottom: 16px solid @background-color;

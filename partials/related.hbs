@@ -1,0 +1,16 @@
+{{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" as |related|}}
+	{{#if related.length}}
+		<div class="row related-posts-wrapper">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="related-post-title">你可能喜欢......</div>
+				<div class="related-post-list">
+					{{#foreach related}}
+						<a href="{{url}}" style="background-image: url({{feature_image}})">
+							<p>{{title}}</p>
+						</a>
+					{{/foreach}}
+				</div>
+			</div>
+		</div>
+	{{/if}}
+{{/get}}

@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		{{#primary_author}}
+			<div class="post-author">
+				<figure class="author-image">
+					<a href="{{url}}" style="background-image: url({{img_url profile_image}})"></a>
+				</figure>
+				<section class="author-info">
+					<h4>
+						<a href="{{url}}">{{name}}</a>
+					</h4>
+					<p>{{bio}}</p>
+					<ul class="post-author-social">
+						{{> custom/social-icon}}
+					</ul>
+					<div class="author-meta">
+						<a href="{{website}}"><span><i class="fa fa-link"></i>{{website}}</span></a>
+						<span><i class="fa fa-map-marker"></i>{{location}}</span>
+					</div>
+				</section>
+			</div>
+		{{/primary_author}}
+	</div>
+</div>           
+           
+           
+            
