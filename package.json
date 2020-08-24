@@ -19,7 +19,7 @@
   "author": {
     "name": "Jerry Mei",
     "email": "328047478@qq.com",
-    "url": "http://www.maplejoyous.cn"
+    "url": "http://www.jerrymei.cn"
   },
   "config": {
     "posts_per_page": 9
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/KINGMJ/maple#readme",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
