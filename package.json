@@ -1,8 +1,8 @@
 {
   "name": "maple",
-  "version": "3.2.1",
+  "version": "4.0.0",
   "engines": {
-    "ghost": ">=1.0.0"
+    "ghost": ">=3.0.0"
   },
   "description": "A Ghost theme focused on content designed by jerry.mei",
   "repository": {
@@ -32,11 +32,11 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^3.9.4",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-less": "^4.0.0",
-    "gulp-rename": "^1.2.3",
-    "gulp-uglify": "^3.0.0"
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
