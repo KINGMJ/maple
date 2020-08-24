@@ -1,11 +1,11 @@
-<header style="background-image: url({{@blog.cover_image}})" class="site-header animated fadeIn">
+<header style="background-image: url({{@site.cover_image}})" class="site-header animated fadeIn">
     <div class="header-top">
         {{navigation}}
     </div>
     <div class="header-middle">
         <div class="header-middle-content animated fadeInUp">
-            <a href="{{@blog.url}}" class="site-title">{{@blog.title}}</a>
-            <h5 class="site-description">{{@blog.description}}</h5>
+            <a href="{{@site.url}}" class="site-title">{{@site.title}}</a>
+            <h5 class="site-description">{{@site.description}}</h5>
             <nav class="site-social-navigation">
                 <ul>
                     {{> custom/social-icon}}
