@@ -2,17 +2,16 @@
   background: no-repeat center center;
   background-size: cover;
   position: relative;
-  height: 48vh;
-}
-
-.tag-header:before {
-  .cover-mixin;
-  background: linear-gradient(to bottom, rgba(56, 56, 56, .75), rgba(56, 56, 56, .35) 100%);
+  height: 24vh;
+  &:before{
+    .cover-mixin;
+    background: linear-gradient(to bottom, rgba(56, 56, 56, .75), rgba(56, 56, 56, .35) 100%);
+  }
 }
 
 .tag-header-container {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 100%;
   color: @font-white-color;
   display: flex;
@@ -20,53 +19,58 @@
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+  .tag-content {
+    text-align: center;
+    margin-top: 48px;
+    width: 54%;
+    .tag-title {
+      color: @font-white-color;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 4px;
+    }
+    .tag-description {
+      font-size: 16px;
+      margin-top: 24px;
+      color: #eee;
+      line-height: 1.6;
+    }
+  }
+  .tag-nav {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    a{
+      color: @font-white-color;
+      font-size: 12px;
+      padding: 8px 32px;
+      opacity: 0.8;
+      border: 1px solid #fff;
+      border-radius: 0;
+      background: none;
+      &:hover{
+        background: rgba(255, 255, 255, .2);
+        border-color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
+  .tag-post-num {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    i {
+      margin-right: 10px;
+    }
+  }
 }
 
-.tag-content {
-  text-align: center;
-  margin-top: 20px;
-}
 
-.tag-title {
-  color: @font-white-color;
-  font-size: 56px;
-  font-weight: lighter;
-  text-align: center;
-  letter-spacing: 4px;
-}
 
-.tag-description {
-  font-size: 16px;
-}
 
-.tag-post-num {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-}
 
-.tag-nav {
-  position: absolute;
-  top: 45px;
-  left: 0;
-}
 
-.tag-nav a {
-  color: @font-white-color;
-  font-size: 12px;
-  padding: 8px 32px;
-  opacity: 0.8;
-  border: 1px solid #fff;
-  border-radius: 0;
-  background: none;
-}
 
-.tag-nav a:hover {
-  background: rgba(255, 255, 255, .2);
-  border-color: rgba(255, 255, 255, .6);
-}
 
-.tag-post-num i {
-  margin-right: 10px;
-}
+
 
