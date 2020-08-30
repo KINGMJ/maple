@@ -28,7 +28,7 @@
                 {{#get "tags" include="count.posts"}}
                 {{#foreach tags}}
                 <span class="tag-title">{{name}}</span>
-                {{#get "posts"}}
+                {{#get "posts" filter="primary_tag:{{slug}}"}}
                 {{#foreach posts}}
                 <ul>
                     <li>
@@ -45,6 +45,5 @@
         </div>
     </div>
 </div>
-
 {{> footer this}}
 {{> copyright this}}
