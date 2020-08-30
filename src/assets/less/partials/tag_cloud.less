@@ -3,9 +3,9 @@
   min-height: 36vh;
   margin-bottom: 0;
   padding: 24px 0;
-  a{
+  a.tag{
     color: #fff;
-    margin: 0 6px;
+    margin: 0 6px 8px;
     padding: 0 6px;
     font-size: 14px;
     border-radius: 4px;
@@ -16,10 +16,35 @@
   }
 }
 
-.tags-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+.tag-posts{
+  margin: 24px 0;
+  .tag-title{
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin: 12px 0;
+    display: inline-block;
+    &:before{
+      content: '#';
+      color: @link-color;
+      position: relative;
+      left: -10px;
+    }
+  }
+  ul{
+    margin: 10px 0;
+    li {
+      list-style: none;
+      a{
+        color: #717f8e;
+        text-decoration: underline;
+        &:hover{
+          color: @link-color;
+        }
+        .title{
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }

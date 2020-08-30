@@ -9,16 +9,36 @@
         </div>
     </div>
 </header>
-<div class="site-content" style="background-image: url({{asset 'images/bg_shape.jpg'}});">
+<div class="site-content">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 tags-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 d-flex flex-wrap flex-row justify-content-center align-items-start">
                 {{#get "tags" include="count.posts"}}
                 {{#foreach tags}}
-                <a href="{{url}}" style="background-color: {{#if accent_color}}{{accent_color}}{{else}}#63a35c{{/if}};">
+                <a href="{{url}}" class="tag"
+                    style="background-color: {{#if accent_color}}{{accent_color}}{{else}}#63a35c{{/if}};">
                     <span># {{name}}</span>
                     <span class="count">{{count.posts}}</span>
                 </a>
+                {{/foreach}}
+                {{/get}}
+            </div>
+
+            <div class="col-md-10 tag-posts">
+                {{#get "tags" include="count.posts"}}
+                {{#foreach tags}}
+                <span class="tag-title">{{name}}</span>
+                {{#get "posts"}}
+                {{#foreach posts}}
+                <ul>
+                    <li>
+                        <a href="{{url}}">
+                            <span class="title">{{title}}</span>
+                        </a>
+                    </li>
+                </ul>
+                {{/foreach}}
+                {{/get}}
                 {{/foreach}}
                 {{/get}}
             </div>
