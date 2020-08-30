@@ -1,0 +1,18 @@
+<h4 class="footer-content-title">最新文章</h4>
+<div class="footer-content-post">
+  {{#get "posts" limit="3" as |recents|}}
+  {{#foreach recents}}
+  <div class="recent-single-post">
+    <a href="{{url}}" class="footer-post-cover" style="background-image: url({{#if feature_image}}{{feature_image}}
+								   {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})"></a>
+    <div class="footer-post-info">
+      <h4 class="footer-post-title"><a href="{{url}}">{{title}}</a></h4>
+      <div class="footer-post-date">
+        <span>发表于</span>
+        <span>{{date published_at format="YYYY年MM月DD日"}}</span>
+      </div>
+    </div>
+  </div>
+  {{/foreach}}
+  {{/get}}
+</div>

@@ -1,21 +1,26 @@
 {{!< default}}
-<header {{#if @site.cover_image}}style="background-image: url({{@site.cover_image}})"{{/if}} class="tag-header">
+<header {{#if @site.cover_image}}style="background-image: url({{@site.cover_image}})" {{/if}} class="tag-header">
     <div class="tag-header-container">
         <div class="tag-nav">
-            <a href="{{@site.url}}">HOME</a>
+            <a href="{{@site.url}}">主页</a>
         </div>
         <div class="tag-content">
-            <h1 class="tag-title">标签云</h1>
-        </div>
-        <div class="tag-post-num">
-            <i class="fa fa-signal"></i><span>共 <span class="num"></span> 个标签</span>
+            <h1 class="tag-title">文章分类</h1>
         </div>
     </div>
 </header>
-<div class="site-content">
+<div class="site-content" style="background-image: url({{asset 'images/bg_shape.jpg'}});">
     <div class="container">
         <div class="row">
             <div class="col-md-12 tags-container">
+                {{#get "tags" include="count.posts"}}
+                {{#foreach tags}}
+                <a href="{{url}}" style="background-color: {{#if accent_color}}{{accent_color}}{{else}}#63a35c{{/if}};">
+                    <span># {{name}}</span>
+                    <span class="count">{{count.posts}}</span>
+                </a>
+                {{/foreach}}
+                {{/get}}
             </div>
         </div>
     </div>

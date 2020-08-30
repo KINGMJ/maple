@@ -2,55 +2,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<h4 class="footer-content-title">最新文章</h4>
-				<div class="footer-content-post">
-					{{#get "posts" limit="3" as |recents|}}
-						{{#foreach recents}}
-							<div class="recent-single-post">
-								<a href="{{url}}" class="footer-post-cover"
-								   style="background-image: url({{#if feature_image}}{{feature_image}}
-								   {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})"></a>
-								<div class="footer-post-info">
-									<h4 class="footer-post-title"><a href="{{url}}">{{title}}</a></h4>
-									<div class="footer-post-date">
-										<span>发表于</span>
-										<span>{{date published_at format="YYYY年MM月DD日"}}</span>
-									</div>
-								</div>
-							</div>
-						{{/foreach}}
-					{{/get}}
-				</div>
+				{{> recent}}
 			</div>
 			<div class="col-md-4">
-				<h4 class="footer-content-title">标签云</h4>
-				<div class="footer-content-tags">
-					<a href="/tag_cloud">...</a>
-				</div>
+				{{> tag-cloud}}
 			</div>
 			<div class="col-md-4">
-				<h4 class="footer-content-title">友情链接</h4>
-				<div class="footer-friend-links">
-					{{> custom/friend-link}}
-				</div>
-
-				<!--<h4 class="footer-content-title">微信/公众号</h4>-->
-				<!--<ul class="footer-follow-social">-->
-					<!--<li>-->
-                        <!--<img src="{{asset 'images/wechat.png'}}" alt="">-->
-                        <!--<span>微信</span>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<img src="{{asset 'images/itcat.jpg'}}" alt="">-->
-                        <!--<span>技术号</span>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<img src="{{asset 'images/acat.jpg'}}" alt="">-->
-                        <!--<span>摄影/分享</span>-->
-                    <!--</li>-->
-				<!--</ul>-->
+				{{> friend-link}}
 			</div>
 		</div>
 	</div>
 </footer>
-

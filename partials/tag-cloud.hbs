@@ -1,0 +1,9 @@
+<h4 class="footer-content-title">标签云</h4>
+<div class="footer-content-tags">
+   {{#get "tags" limit="21" as |tags|}}
+      {{#foreach tags}}
+        <a href="{{url}}">{{name}}</a>
+      {{/foreach}}
+   {{/get}}
+  <a href="/tag_cloud">...</a>
+</div>

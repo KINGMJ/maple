@@ -2,7 +2,8 @@
   "name": "maple",
   "version": "4.0.0",
   "engines": {
-    "ghost": ">=3.0.0"
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
   },
   "description": "A Ghost theme focused on content designed by jerry.mei",
   "repository": {
@@ -22,7 +23,7 @@
     "url": "http://www.jerrymei.cn"
   },
   "config": {
-    "posts_per_page": 9
+    "posts_per_page": 12
   },
   "license": "MIT",
   "bugs": {

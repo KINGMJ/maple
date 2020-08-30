@@ -1,48 +1,45 @@
 <div class="container">
     <div class="row">
         {{#foreach posts}}
-            <article class="col-md-3 col-sm-6 post">
-                <div class="post-card">
-                    <!--post封面-->
-                    <div class="post-cover">
-                        <a class="cover-image cover-transition" href="{{url}}"
-                               style="background-image: url({{#if feature_image}}{{feature_image}}
+        <article class="col-md-3 col-sm-6 post">
+            <div class="post-card">
+                <!--post封面-->
+                <div class="post-cover">
+                    <a class="cover-image cover-transition" href="{{url}}" style="background-image: url({{#if feature_image}}{{feature_image}}
                                {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})"></a>
-                            {{#if tags}}
-                                <div class="cover-bottom">
-                                    <div class="post-tags">
-                                        {{#foreach tags limit=1}}
-                                            <a href="{{url}}">{{name}}</a>
-                                        {{/foreach}}
-                                    </div>
-                                </div>
-                            {{/if}}
+                    {{#if tags}}
+                    <div class="post-tags">
+                        {{#foreach tags limit=1}}
+                        <a href="{{url}}">{{name}}</a>
+                        {{/foreach}}
                     </div>
-                    <div class="post-info">
-                            <div class="item-content">
-                                <h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
+                    {{/if}}
+                </div>
+                <div class="post-info">
+                    <div class="item-content">
+                        <h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
+                    </div>
+                    <div class="item-footer">
+                        <div class="post-date">
+                            <div>
+                                <i class="fa fa-clock-o"></i>
+                                <span>{{date format="YYYY/MM/DD"}}</span>
                             </div>
-                            <div class="item-footer">
-                                <div class="post-date">
-                                    <div>
-                                        <i class="fa fa-clock-o"></i>
-                                        <span>{{date format="YYYY/MM/DD"}}</span>
-                                    </div>
-                                   <div>
-                                       <span>{{reading_time}}</span>
-                                   </div>
-                                </div>
+                            <div>
+                                <span>{{reading_time}}</span>
                             </div>
+                        </div>
                     </div>
                 </div>
-            </article>
+            </div>
+        </article>
         {{/foreach}}
     </div>
 
     <div class="row">
         <div class="col-md-12">
             {{#if pagination}}
-                {{pagination}}
+            {{pagination}}
             {{/if}}
         </div>
     </div>
