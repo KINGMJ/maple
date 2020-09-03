@@ -3,4 +3,43 @@
   min-height: 36vh;
   margin-bottom: 0;
   padding: 24px 0;
+  .post{
+    margin-bottom: 24px;
+  }
+  .post-date-2021+.post-date-2021 .post-label, 
+  .post-date-2020+.post-date-2020 .post-label,
+  .post-date-2019+.post-date-2019 .post-label,
+  .post-date-2018+.post-date-2018 .post-label,
+  .post-date-2017+.post-date-2017 .post-label,
+  .post-date-2016+.post-date-2016 .post-label,
+  .post-date-2015+.post-date-2015 .post-label
+  {
+    display: none;
+  }
+  .post-link{
+    display: flex;
+    align-items: center;
+    border-bottom: #e6f2f2 1px double;
+    padding-bottom: 18px;
+    .post-date{
+      color: #999;
+      font-size: 12px;
+      margin-right: 12px;
+    }
+    .post-title{
+      color: #01161E;
+      font-weight: bold;
+    }
+  }
+  .post-label{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #333;
+    .fa{
+      margin-right: 4px;
+    }
+  }
 }
+

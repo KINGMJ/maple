@@ -13,13 +13,22 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 archive-posts">
-        {{#get "posts" order="published_at asc"}}
+        {{#get "posts" limit="all" order="published_at desc"}}
         {{#foreach posts}}
-        {{title}}
-        {{date}}
-        <br>
+        <div class="post post-date-{{date format="YYYY"}}">
+          <div class="post-label">
+            <i class="fa fa-calendar"></i>
+            <span>{{date format="YYYY"}}</span>
+          </div>
+          <a class="post-link" href="{{url}}">
+            <div class="post-date">
+              <i class="fa fa-clock-o"></i>
+              <span>{{date format="YYYY/MM/DD"}}</span>
+            </div>
+            <span class="post-title"> {{title}}</span>
+          </a>
+        </div>
         {{/foreach}}
-
         {{/get}}
       </div>
     </div>
