@@ -84,6 +84,10 @@
     margin-bottom: 4px;
 }
 
+.md-preview li ul{
+    margin-top: 8px;
+}
+
 .md-preview ul, ol {
     padding-left: 30px;
 }
@@ -99,11 +103,12 @@
 .md-preview code {
     padding: 2px 4px;
     white-space: nowrap;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace, 'Microsoft YaHei';
+    font-family: Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace, 'Microsoft YaHei';
     color: #c7254e;
     background-color: #f9f2f4;
     border-radius: 4px;
     margin: 0 4px;
+    font-weight: bold;
 }
 
 table {
@@ -147,13 +152,13 @@ table tr th :last-child, table tr td :last-child {
     background: url(../../../assets/images/mac.png) #1E1E1E;
     border-radius: 4px;
     border: none;
-    background-position: 2px 0;
+    background-position: 2px 2px;
     background-repeat: no-repeat;
     font-size: 13px;
     line-height: 1.7;
     overflow: auto;
-    padding: 24px 12px 6px;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    padding: 30px 12px 6px;
+    font-family: Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace, 'Microsoft YaHei';
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
@@ -165,6 +170,7 @@ table tr th :last-child, table tr td :last-child {
     white-space: pre;
     border: none;
     background: transparent;
+    font-weight: normal;
 }
 
 .md-preview pre code span {
