@@ -1,0 +1,29 @@
+{{!< default}}
+<header {{#if @site.cover_image}}style="background-image: url({{@site.cover_image}})" {{/if}} class="tag-header">
+  <div class="tag-header-container">
+    <div class="tag-nav">
+      <a href="{{@site.url}}">主页</a>
+    </div>
+    <div class="tag-content">
+      <h1 class="tag-title">文章归档</h1>
+    </div>
+  </div>
+</header>
+<div class="site-content">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 archive-posts">
+        {{#get "posts" order="published_at asc"}}
+        {{#foreach posts}}
+        {{title}}
+        {{date}}
+        <br>
+        {{/foreach}}
+
+        {{/get}}
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer this}}
+{{> copyright this}}
