@@ -32,7 +32,7 @@ function randomSiteCover() {
 
 function removeNoContentTag() {
     var last = $('.tag-posts').children().last()
-    if (last[0].tagName == "SPAN") {
+    if (!!last[0] && last[0].tagName == "SPAN") {
         last.remove()
     }
 }
