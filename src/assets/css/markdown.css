@@ -165,7 +165,7 @@ table tr th :last-child, table tr td :last-child {
 
 .md-preview pre code {
     color:#DCDCDC;
-    white-space: pre;
+    white-space: break-spaces;
     border: none;
     background: transparent;
     font-weight: normal;
