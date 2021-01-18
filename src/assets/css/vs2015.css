@@ -113,3 +113,7 @@
   display: inline-block;
   width: 100%;
 }
+
+.hljs.shell .hljs-meta, .hljs.shell .bash{
+  color: #57a64a
+}
