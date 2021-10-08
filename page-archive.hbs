@@ -12,7 +12,7 @@
 <div class="site-content">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-8 archive-posts">
+      <div class="col-md-6 archive-posts">
         {{#get "posts" limit="all" order="published_at desc"}}
         {{#foreach posts}}
         <div class="post post-date-{{date format="YYYY"}}">
@@ -21,11 +21,11 @@
             <span>{{date format="YYYY"}}</span>
           </div>
           <a class="post-link" href="{{url}}">
+            <span class="post-title"> {{title}}</span>
             <div class="post-date">
               <i class="fa fa-clock-o"></i>
               <span>{{date format="YYYY/MM/DD"}}</span>
             </div>
-            <span class="post-title"> {{title}}</span>
           </a>
         </div>
         {{/foreach}}

@@ -1,43 +1,42 @@
 /*文章归档*/
-.page-archive .site-content{
+.page-archive .site-content {
   min-height: 36vh;
   margin-bottom: 0;
   padding: 24px 0;
-  .post{
+  .post {
     margin-bottom: 12px;
   }
 
-  .post-date-2023+.post-date-2023 .post-label, 
-  .post-date-2022+.post-date-2022 .post-label, 
-  .post-date-2021+.post-date-2021 .post-label, 
-  .post-date-2020+.post-date-2020 .post-label,
-  .post-date-2019+.post-date-2019 .post-label,
-  .post-date-2018+.post-date-2018 .post-label,
-  .post-date-2017+.post-date-2017 .post-label,
-  .post-date-2016+.post-date-2016 .post-label,
-  .post-date-2015+.post-date-2015 .post-label
-  {
+  .post-date-2023 + .post-date-2023 .post-label,
+  .post-date-2022 + .post-date-2022 .post-label,
+  .post-date-2021 + .post-date-2021 .post-label,
+  .post-date-2020 + .post-date-2020 .post-label,
+  .post-date-2019 + .post-date-2019 .post-label,
+  .post-date-2018 + .post-date-2018 .post-label,
+  .post-date-2017 + .post-date-2017 .post-label,
+  .post-date-2016 + .post-date-2016 .post-label,
+  .post-date-2015 + .post-date-2015 .post-label {
     display: none;
   }
-  .post-link{
+  .post-link {
     display: flex;
     align-items: center;
     padding-bottom: 4px;
-    .post-date{
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    .post-date {
       color: @font-grey-color;
       font-size: 12px;
       margin-right: 12px;
     }
   }
-  .post-label{
+  .post-label {
     text-align: center;
     font-size: 32px;
-    font-weight: bold;
     margin-bottom: 24px;
     color: #333;
-    .fa{
+    .fa {
       margin-right: 4px;
     }
   }
 }
-
