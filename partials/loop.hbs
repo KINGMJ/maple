@@ -1,8 +1,10 @@
 <div class="container">
     <div class="row">
         {{#foreach posts}}
-        <article class="col-md-3 col-sm-6 post">
-            <div class="post-card">
+            {{#has tag="ARTS"}}
+            {{else}}
+                <article class="col-md-3 col-sm-6 post">
+                    <div class="post-card">
                 <!--post封面-->
                 <div class="post-cover">
                     <a class="cover-image cover-transition" href="{{url}}" style="background-image: url({{#if feature_image}}{{feature_image}}
@@ -31,8 +33,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </article>
+                    </div>
+                </article>
+            {{/has}}
         {{/foreach}}
     </div>
 
