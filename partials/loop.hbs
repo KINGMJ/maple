@@ -1,9 +1,7 @@
 <div class="container">
     <div class="row">
         {{#foreach posts}}
-            {{#has tag="ARTS"}}
-            {{else}}
-                <article class="col-md-3 col-sm-6 post">
+            <article class="col-md-3 col-sm-6 post">
                     <div class="post-card">
                 <!--post封面-->
                 <div class="post-cover">
@@ -34,11 +32,9 @@
                     </div>
                 </div>
                     </div>
-                </article>
-            {{/has}}
+            </article>
         {{/foreach}}
     </div>
-
     <div class="row">
         <div class="col-md-12">
             {{#if pagination}}

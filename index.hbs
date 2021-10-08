@@ -1,7 +1,9 @@
 {{!< default}}
 {{> header}}
 <div class="site-content">
-    {{> loop}}
+    {{#get "posts" include="tags" filter="primary_tag:-arts"}}
+    {{> loop }}
+    {{/get}}
 </div>
 {{> footer}}
 {{> copyright}}
