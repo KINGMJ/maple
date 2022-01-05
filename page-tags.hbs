@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 d-flex flex-wrap flex-row justify-content-center align-items-start">
-                {{#get "tags" include="count.posts"}}
+                {{#get "tags" limit="all" include="count.posts"}}
                 {{#foreach tags}}
                 <a href="{{url}}" class="tag"
                     style="background-color: {{#if accent_color}}{{accent_color}}{{else}}#63a35c{{/if}};">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="col-md-6 tag-posts">
-                {{#get "tags" include="count.posts"}}
+                {{#get "tags" limit="all" include="count.posts"}}
                 {{#foreach tags}}
                 <span class="tag-title">{{name}}</span>
                 {{#get "posts" filter="primary_tag:{{slug}}"}}
