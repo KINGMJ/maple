@@ -1,6 +1,8 @@
 {{!< default}}
 {{#post}}
-	<header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@site.cover_image}}{{/if}})"
+	{{!-- <header style="background-image: url({{#if feature_image}}{{feature_image}}{{else}}{{@site.cover_image}}{{/if}})" --}}
+	<header style="background-image: url({{#if primary_tag.feature_image}}{{primary_tag.feature_image}}{{else}}{{@site.cover_image}}{{/if}})" 
+		
 	        class="post-header">
 		<div class="post-header-container">
 			<div class="post-nav">

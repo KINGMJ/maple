@@ -6,10 +6,14 @@
   background: no-repeat center center;
   background-size: cover;
   position: relative;
-  height: 40vh;
+  height: 36vh;
   &:before {
     .cover-mixin;
-    background: linear-gradient(to bottom, rgba(56, 56, 56, .75), rgba(56, 56, 56, .35) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(56, 56, 56, 0.75),
+      rgba(56, 56, 56, 0.35) 100%
+    );
   }
   .post-tags {
     position: absolute;
@@ -32,8 +36,8 @@
       border-radius: 0;
       background: none;
       &:hover {
-        background: rgba(255, 255, 255, .2);
-        border-color: rgba(255, 255, 255, .6);
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.6);
       }
     }
   }
@@ -137,11 +141,13 @@
   width: 48px;
   height: 48px;
   display: none;
-  background: url("../images/rocket.png") no-repeat center center rgba(0, 0, 0, 0.55);
+  background: url("../images/rocket.png") no-repeat center center
+    rgba(0, 0, 0, 0.55);
   border-radius: 4px;
   background-size: 80%;
   &:hover {
-    background: url("../images/rocket.png") no-repeat center center rgba(0, 0, 0, 0.35);
+    background: url("../images/rocket.png") no-repeat center center
+      rgba(0, 0, 0, 0.35);
     background-size: 80%;
   }
 }
@@ -151,13 +157,15 @@
   right: -308px;
   top: 0;
   width: 300px;
-  border-left: 1px solid @border-color;
+  border-left: 1px solid rgba(211, 220, 228, 1);
+  background-color: rgba(245, 247, 249, 1);
   height: 100%;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .article-wrapper {
   position: relative;
+  padding-top: 24px;
 }
 
 .article-left {
@@ -209,7 +217,7 @@
   position: absolute;
   color: #fff !important;
   text-decoration: none;
-  background: rgba(102, 102, 102, .65);
+  background: rgba(102, 102, 102, 0.65);
   font-size: 12px;
   padding: 0 6px;
   border-top-right-radius: 0;
