@@ -117,7 +117,7 @@ function showSlide(e) {
     $('.article-left').addClass('has-side');
     //初始化toc
     $('#toc').toc({
-        'selectors': 'h1,h2,h3', //elements to use as headings
+        'selectors': 'h1,h2,h3,h4', //elements to use as headings
         'container': '.md-preview', //element to find all selectors in
         'prefix': 'toc',
         'highlightOffset': 1, //offset to trigger the next headline

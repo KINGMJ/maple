@@ -76,7 +76,20 @@
             $('li', self).removeClass(activeClassName);
             $(e.target).parent().addClass(activeClassName);
         };
-
+        
+        //隐藏TOC的li元素
+        var hideTocLi = function (target) {
+          if ($(target).length == 0) {
+            return;
+          }
+          $.each($(target), function (index, item) {
+            var li_class = item.className.split(' ')[0];
+            var h_title = li_class.charAt(li_class.length - 1); 
+            if(h_title>3){
+                $(item).addClass('hidden')
+            }
+          });
+        };
         //highlight on scroll
         var timeout;
         var prev_top;  //上一次滚动的距离，用来判断滚动的方向
@@ -123,7 +136,8 @@
                 if (scroll_direction == 'down') {
                     //当前li之前的下一级
                     var prev_low_level_li = $('.toc-active').prevAll('.toc-h' + (parseInt(current_h_title) + 1));
-                    $(prev_low_level_li).addClass('hidden');
+                    // $(prev_low_level_li).addClass('hidden');
+                    hideTocLi(prev_low_level_li)
                     $.each(next_li, function (i, n) {
                         var li_class = n.className.split(' ')[0];
                         var h_title = li_class.charAt(li_class.length - 1);
@@ -140,7 +154,8 @@
                         var h_title = li_class.charAt(li_class.length - 1);
                         if (h_title < current_h_title) {
                             var prev_hidden_li = $(n).prevAll('.toc-h' + (parseInt(current_h_title)));
-                            prev_hidden_li.addClass('hidden');
+                            // prev_hidden_li.addClass('hidden');
+                            hideTocLi(prev_hidden_li)
                             $(n).removeClass('hidden');
                             return false;
                         }
@@ -153,7 +168,9 @@
                 } else {
                     //当前li之后的下一级
                     var next_low_level_li = $('.toc-active').nextAll('.toc-h' + (parseInt(current_h_title) + 1));
-                    $(next_low_level_li).addClass('hidden');
+                    hideTocLi(next_low_level_li)
+                    // $(next_low_level_li).addClass('hidden');
+                    hideTocLi(next_low_level_li)
                     $.each(prev_li, function (i, n) {
                         var li_class = n.className.split(' ')[0];
                         var h_title = li_class.charAt(li_class.length - 1);
@@ -170,7 +187,9 @@
                         var li_class = n.className.split(' ')[0];
                         var h_title = li_class.charAt(li_class.length - 1);
                         if (h_title < current_h_title) {
-                            $(n).nextAll('.toc-h' + (parseInt(current_h_title))).addClass('hidden');
+                            var current_li = '.toc-h' + (parseInt(current_h_title))
+                            // $(n).nextAll(current_li).addClass('hidden');
+                            hideTocLi($(n).nextAll(current_li))
                             return false;
                         }
                         if (h_title == current_h_title) {
@@ -222,7 +241,8 @@
                     .addClass(opts.itemClass(i, heading, $h, opts.prefix))
                     .append(a);
                 if (h_title > prev_li_int) {
-                    li.addClass('hidden');
+                    hideTocLi(li)
+                    // li.addClass('hidden');
                 } else {
                     prev_li_int = h_title;
 
@@ -237,7 +257,8 @@
     jQuery.fn.toc.defaults = {
         container: 'body',
         listType: '<ul/>',
-        selectors: 'h1,h2,h3',
+        selectors: 'h1,h2,h3,h4',
+        showLevel: 3, //默认显示到h3，h3之后必须滚动到对应的内容才展开
         smoothScrolling: function (target, options, callback) {
             $(target).smoothScroller({
                 offset: options.scrollToOffset
