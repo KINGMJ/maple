@@ -5,19 +5,19 @@
                     <div class="post-card">
                 <!--post封面-->
                 <div class="post-cover">
-                    <a class="cover-image cover-transition" href="{{url}}" style="background-image: url({{#if feature_image}}{{feature_image}}
+                    <a class="cover-image cover-transition" href="{{url}}" target="_blank" style="background-image: url({{#if feature_image}}{{feature_image}}
                                {{else}}{{asset 'images/default_cover.jpg'}}{{/if}})"></a>
                     {{#if tags}}
                     <div class="post-tags">
                         {{#foreach tags limit=1}}
-                        <a href="{{url}}">{{name}}</a>
+                        <a href="{{url}}" target="_blank">{{name}}</a>
                         {{/foreach}}
                     </div>
                     {{/if}}
                 </div>
                 <div class="post-info">
                     <div class="item-content">
-                        <h3 class="post-title"><a href="{{url}}">{{title}}</a></h3>
+                        <h3 class="post-title"><a href="{{url}}" target="_blank">{{title}}</a></h3>
                     </div>
                     <div class="item-footer">
                         <div class="post-date">
